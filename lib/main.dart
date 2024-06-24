@@ -1,5 +1,6 @@
 
 import 'package:aprendiendo/vistas/paginas/counter/counter_screen.dart';
+import 'package:aprendiendo/vistas/paginas/practica/practica.dart';
 import 'package:flutter/material.dart';
 import 'package:aprendiendo/vistas/paginas/estructura/estructura.dart';
 
@@ -13,10 +14,15 @@ class MyApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Estructura(),
-      //home: CounterScreen(),
+      theme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: Colors.blue,
+      ),
+      //home: Estructura(),
+      home: const CounterScreen(),
+      //home: Practica(),
     );
   }
 
