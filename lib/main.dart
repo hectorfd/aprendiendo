@@ -1,5 +1,7 @@
 
+import 'package:aprendiendo/vistas/paginas/counter/counter_function.dart';
 import 'package:aprendiendo/vistas/paginas/counter/counter_screen.dart';
+import 'package:aprendiendo/vistas/paginas/maqueta/welcome_screen.dart';
 import 'package:aprendiendo/vistas/paginas/practica/practica.dart';
 import 'package:flutter/material.dart';
 import 'package:aprendiendo/vistas/paginas/estructura/estructura.dart';
@@ -21,8 +23,10 @@ class MyApp extends StatelessWidget{
         colorSchemeSeed: Colors.blue,
       ),
       //home: Estructura(),
-      home: const CounterScreen(),
+      //home: const CounterFunction(),
+      //home: const CounterScreen(),
       //home: Practica(),
+      home:const WelcomeScreen(),
     );
   }
 
