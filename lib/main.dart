@@ -1,6 +1,7 @@
 
 import 'package:aprendiendo/vistas/paginas/counter/counter_function.dart';
 import 'package:aprendiendo/vistas/paginas/counter/counter_screen.dart';
+import 'package:aprendiendo/vistas/paginas/dados/dados.dart';
 import 'package:aprendiendo/vistas/paginas/estructura2/maqueta2.dart';
 import 'package:aprendiendo/vistas/paginas/maqueta/welcome_screen.dart';
 import 'package:aprendiendo/vistas/paginas/practica/practica.dart';
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget{
       //home: Practica(),
       //home:const WelcomeScreen(),
       //home:const Maqueta2(),
-      home:const Xilofono(),
+      //home:const Xilofono(),
+      home:const Dados(),
     );
   }
 

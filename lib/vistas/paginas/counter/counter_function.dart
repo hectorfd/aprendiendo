@@ -74,41 +74,92 @@ class _CounterFunctionState extends State<CounterFunction> {
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          FloatingActionButton(
-            onPressed: (){
-              // incrementar
-              setState(() {
+          // FloatingActionButton(
+          //   onPressed: (){
+          //     // incrementar
+          //     setState(() {
+          //       counter = 0;
+                
+          //       });
+          //       },
+          //       child:const Icon(Icons.refresh_rounded),
+          //       ),
+          //       const SizedBox(height: 10,),
+          //       FloatingActionButton(
+          //   onPressed: (){
+          //     // incrementar
+          //     setState(() {
+          //       counter++;
+          //       counter == 1 ||counter == -1 ? texto = 'Click': texto = 'Clicks';
+          //       });
+          //       },
+          //       child:const Icon(Icons.plus_one),
+          //       ),
+          //       const SizedBox(height: 10,),
+                // FloatingActionButton(
+                //   onPressed: (){
+                //     // incrementar
+                //     setState(() {
+                //       counter--;
+                //       counter == 1 ||counter == -1 ? texto = 'Click': texto = 'Clicks';
+                //       });
+                //       },
+                //       child:const Icon(Icons.exposure_minus_1_outlined),
+                // ),
+                const SizedBox(height: 10,),
+                CustomButton(
+                icon: Icons.refresh_outlined,
+                onPressed: (){
+                  setState(() {
                 counter = 0;
                 
-                });
+                 });
                 },
-                child:const Icon(Icons.refresh_rounded),
                 ),
                 const SizedBox(height: 10,),
-                FloatingActionButton(
-            onPressed: (){
-              // incrementar
-              setState(() {
-                counter++;
-                counter == 1 ||counter == -1 ? texto = 'Click': texto = 'Clicks';
-                });
+                CustomButton(
+                icon: Icons.exposure_minus_1_outlined,
+                onPressed: (){
+                  setState(() {
+                       counter--;
+                       counter == 1 ||counter == -1 ? texto = 'Click': texto = 'Clicks';
+                       });
                 },
-                child:const Icon(Icons.plus_one),
                 ),
                 const SizedBox(height: 10,),
-                FloatingActionButton(
-            onPressed: (){
-              // incrementar
-              setState(() {
-                counter--;
-                counter == 1 ||counter == -1 ? texto = 'Click': texto = 'Clicks';
-                });
-                },
-                child:const Icon(Icons.exposure_minus_1_outlined),
-                ),
+                CustomButton(
+                  icon: Icons.plus_one,
+                  onPressed:(){
+                    setState(() {
+                    counter++;
+                    counter == 1 ||counter == -1 ? texto = 'Click': texto = 'Clicks';
+                   });
+                  } ,
+                  ),
         ],
 
       ),
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  final IconData icon;
+  final VoidCallback? onPressed;
+  const CustomButton({
+    super.key,
+    required this.icon,
+    this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return FloatingActionButton(
+      enableFeedback: true,
+      elevation: 5,
+      backgroundColor: Colors.amber,
+      onPressed: onPressed,
+          child: Icon(icon),
     );
   }
 }
