@@ -47,13 +47,20 @@ class _DadosState extends State<Dados> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
             children: <Widget>[
-              Expanded(
-                child: Image.asset('assets/images/dice$leftDadoNumber.png'),
+              const SizedBox(height: 20,),
+              AnimatedSwitcher(
+                duration:const Duration(milliseconds: 500),
+                child: Image.asset('assets/images/dice$leftDadoNumber.png',height: 200,),
                 ),
-              Expanded(
-                child: Image.asset('assets/images/dice$rightDadoNumber.png'),
+               
+              AnimatedSwitcher(
+                duration:const Duration(milliseconds: 500),
+                child: Image.asset('assets/images/dice$rightDadoNumber.png',height: 200,),
                 ),
+                const SizedBox(height: 20,),
                 ],
                 ),
                 

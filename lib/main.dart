@@ -5,6 +5,7 @@ import 'package:aprendiendo/vistas/paginas/dados/dados.dart';
 import 'package:aprendiendo/vistas/paginas/estructura2/maqueta2.dart';
 import 'package:aprendiendo/vistas/paginas/maqueta/welcome_screen.dart';
 import 'package:aprendiendo/vistas/paginas/practica/practica.dart';
+import 'package:aprendiendo/vistas/paginas/preguntas/preguntas.dart';
 import 'package:aprendiendo/vistas/paginas/xilofono/xilofono.dart';
 import 'package:flutter/material.dart';
 import 'package:aprendiendo/vistas/paginas/estructura/estructura.dart';
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget{
       //home:const WelcomeScreen(),
       //home:const Maqueta2(),
       //home:const Xilofono(),
-      home:const Dados(),
+      //home:const Dados(),
+      home: const Preguntas(),
     );
   }
 
