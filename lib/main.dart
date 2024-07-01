@@ -3,6 +3,7 @@ import 'package:aprendiendo/vistas/paginas/counter/counter_function.dart';
 import 'package:aprendiendo/vistas/paginas/counter/counter_screen.dart';
 import 'package:aprendiendo/vistas/paginas/dados/dados.dart';
 import 'package:aprendiendo/vistas/paginas/estructura2/maqueta2.dart';
+import 'package:aprendiendo/vistas/paginas/home/home.dart';
 import 'package:aprendiendo/vistas/paginas/maqueta/welcome_screen.dart';
 import 'package:aprendiendo/vistas/paginas/practica/practica.dart';
 import 'package:aprendiendo/vistas/paginas/preguntas/preguntas.dart';
@@ -34,7 +35,9 @@ class MyApp extends StatelessWidget{
       //home:const Maqueta2(),
       //home:const Xilofono(),
       //home:const Dados(),
-      home: const Preguntas(),
+      //home: const Preguntas(),
+      home:const Inicio(),
+      
     );
   }
 

@@ -202,7 +202,7 @@ class HomeScreen extends StatelessWidget{
                       children: [
                         Padding(padding:const EdgeInsets.all(10),
                         child: Image.asset(
-                          'images/${imgList[index]}.png',
+                          'assets/images/${imgList[index]}.png',
                           width: 100,
                           height:100,
                           

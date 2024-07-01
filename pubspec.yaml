@@ -86,10 +86,11 @@ flutter:
   - assets/images/Python.png
   - assets/images/C#.png
   - assets/images/picture1.jpeg
+  - assets/images/logo-UTEA.png
   fonts:
     - family: Poppins
       fonts:
-        - asset: assets/fonts/Poppins/Poppins-Light.ttf
+        - asset: assets/fonts/radom/MonaspaceRadon-WideBold.woff
  
  
 

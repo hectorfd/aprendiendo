@@ -32,7 +32,7 @@ class _PreguntasState extends State<Preguntas> {
   void _verificarRespuesta(bool respuestaUsuario) {
     setState(() {
       if (respuestaUsuario == respuestas[actualPreguntaIndex]) {
-        resultadoMensaje = '¡Correcto!';
+        resultadoMensaje = '¡Firme!';
       } else {
         resultadoMensaje = '¡Incorrecto!';
       }

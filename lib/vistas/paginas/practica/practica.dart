@@ -6,125 +6,176 @@ import 'package:flutter/widgets.dart';
 
 class Practica extends StatelessWidget{
   
-  
   const Practica({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      debugShowCheckedModeBanner: false,
-       home: Scaffold(
-        //backgroundColor: Colors.deepPurple,
-        backgroundColor: Color.fromARGB(255, 223, 225, 172),
-        body: SafeArea(
-          // child: Column(
-          //   children: [
-          //     Container(
-          //       color: Colors.yellow,
-          //       child: Text("Hola 1"),
-          //       height: 100.0,
-          //       width: 100.0,
-          //       margin: EdgeInsets.all(10.0),
-          //       padding: EdgeInsets.all(30.0),
-          //       alignment: Alignment.topRight,
-          //     ),
-          //     Container(
-          //       color: Colors.blue,
-          //       child: Text("Hola 1"),
-          //       height: 100.0,
-          //       width: 400.0,
-          //       margin: EdgeInsets.all(10.0),
-          //       padding: EdgeInsets.all(30.0),
-          //       alignment: Alignment.topRight,
-          //     ),
-          //     Container(
-          //       color: Colors.redAccent,
-          //       child: Text("Hola 3"),
-          //       height: 100.0,
-          //       width: 100.0,
-          //       margin: EdgeInsets.all(10.0),
-          //       padding: EdgeInsets.all(30.0),
-          //       alignment: Alignment.topRight,
-          //     ),
-          //     Text("Otro elemento"),
-          //   ],
-          //   mainAxisAlignment: MainAxisAlignment.center,
-          //   //crossAxisAlignment: CrossAxisAlignment.end,
-          //   //crossAxisAlignment: CrossAxisAlignment.center,
-          //   crossAxisAlignment: CrossAxisAlignment.stretch,
-          // ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //crossAxisAlignment: CrossAxisAlignment.center,
-            // children: [
-            //     Container(
-            //       height: 100,
-            //       width: 100,
-            //       color: Colors.amber,
-            //     ),
-            //     Container(
-            //       height: 200,
-            //       width: 100,
-            //       color: Colors.blue,
-            //     ),
-            //     Container(
-            //       height: 100,
-            //       width: 400,
-            //       color: Colors.red,
-            //     ),
-            //     Container(
-            //       height: 100,
-            //       width: 100,
-            //       color: Colors.orange,
-            //     ),
-            // ],
-            // children: [
-              
-            //   Icon(
-            //     Icons.call,
-            //     size: 100,
-            //     color: Colors.blue,
+    return Scaffold(
+      appBar: AppBar(
+           title: const Text('Top News'),
+           leading: IconButton(
+             icon: const Icon(Icons.arrow_back_ios_new_rounded),
+             onPressed: () {
+             
+             },
+           ),
+           actions: [
+            IconButton(
+              icon: const Icon(Icons.share),
+              onPressed: () {
                 
-            //     ),
-            //     Icon(
-            //     Icons.place,
-            //     size: 100,
-            //     color: Colors.red,
-            //     ),
-            //     Icon(
-            //     Icons.share,
-            //     size: 100,
-            //     color: Colors.cyan,
-            //     ),
-            // ],
-            children: [
-                // Container(
-                //   width: 500,
-                //   height: 829,
-                //   child: Image.network(
-                //               'https://images.pexels.com/photos/18281552/pexels-photo-18281552/free-photo-of-mar-playa-arena-relajacion.jpeg',
-                              
-                //               fit: BoxFit.cover,
-                //             ),
-                // ),
-                TextButton(onPressed: (){}, child: const Text('joer')),
-                ElevatedButton(onPressed: (){
-                  print('esta vaina funca');
-                },
-                 child: const Text('Hola'),
-                 
-                 ),
-                 ElevatedButton(onPressed: (){
-                  print('cancelar go');
-                 },
-                 child: const Text('Cancelar'),
-                 
-                 ),
-            ],
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.bookmark),
+              onPressed: () {
+               
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.more_vert),
+              onPressed: () {
+
+              },
+            ),
+          ],
+          flexibleSpace: Container(
+            decoration:const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: Colors.grey, 
+                  width: 2.0, 
+                ),
+              ),
+            ),
           ),
         ),
-      ),
+       body: ListView(
+        children: [
+            const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            child: Text(
+              'LISTS',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 22,
+              ),
+            ),
+          ),
+           const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            child: Text(
+              'Consectetur eu nisi velit quis tempor mollit consectetur occaecat exercitation esse consequat Lorem Ipsum.',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 18,
+              ),
+            ),
+          ),
+          Padding(
+          padding:const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+          child: RichText(
+            text:const TextSpan(
+              children: [
+                TextSpan(
+                  text: 'by ',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 15,
+                  ),
+                ),
+                TextSpan(
+                  text: 'Hector Ferro Davalos',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15,
+                  ),
+                ),
+                TextSpan(
+                  text: ' Forbes List',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 15,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          ),
+      Padding(
+          padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+          child: RichText(
+            text:const TextSpan(
+              children: [
+                TextSpan(
+                  text: 'Hola ',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 15,
+                  ),
+                ),
+                TextSpan(
+                  text: 'Nuevo ',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w800,
+                    fontSize: 15,
+                  ),
+                ),
+                TextSpan(
+                  text: 'Mundo',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 15,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          ),
+         Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            child: Image.asset(
+                  'assets/images/picture3.jpeg',
+                  width: 300,
+                  height:250,
+                  //agregar cover
+                  fit: BoxFit.cover,
+                ),
+          ),
+                 const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            child: Text(
+              'Consectetur eu nisi velit quis tempor mollit consectetur occaecat exercitation esse consequat Lorem Ipsum.',
+              style: TextStyle(
+                color: Color(0xFF626068),
+                fontWeight: FontWeight.w400,
+                fontSize: 14,
+              ),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            child: Text(
+              'Ullamco elit mollit fugiat pariatur dolore esse magna et consequat.Dolor excepteur aute proident deserunt cupidatat.Dolor Lorem consequat aute duis laborum nostrud sunt sunt consectetur quis ea commodo mollit.Eiusmod qui proident ullamco duis cupidatat occaecat enim nisi magna culpa magna. Et eu consectetur excepteur ipsum commodo velit pariatur nulla fugiat laboris eiusmod laboris amet. Incididunt amet commodo et veniam dolore cupidatat mollit.',
+              style: TextStyle(
+                color: Color(0xFF626068),
+                fontWeight: FontWeight.w400,
+                fontSize: 16,
+              ),
+            ),
+          ),
+
+        ],
+        ),
+
     );
+    
   }
 
 }

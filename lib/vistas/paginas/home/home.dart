@@ -1,44 +1,39 @@
-import 'package:aprendiendo/vistas/paginas/maqueta/home_screen.dart';
+import 'package:aprendiendo/vistas/paginas/home/vista-home.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-class WelcomeScreen extends StatelessWidget{
-  const WelcomeScreen({super.key});
+class Inicio extends StatelessWidget{
+  const Inicio({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Container(
+      child: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: Stack(
           children: [
             Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height/1.6,
-              decoration:const BoxDecoration(
-                color:  Colors.white,
+              decoration: const BoxDecoration(
+                color: Colors.white,
               ),
             ),
             Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height/1.6,
-              decoration:const BoxDecoration(
-                color:  Color(0xFF6655F3),
-                borderRadius: BorderRadius.only(bottomRight: Radius.circular(70)),
+              height: MediaQuery.of(context).size.height/1.8,
+              decoration: const BoxDecoration(
+                color: Color(0xFF00BDFF),
+                borderRadius: BorderRadius.only(bottomRight: Radius.circular(90))
               ),
               child: Center(
-                child:Image.asset('assets/images/books.png', scale: 0.8,height: 300,),
-                
-                ),
+                child: Image.asset('assets/images/logo-UTEA.png',height: 300,),
+              ),
             ),
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height/2.666,
+                height: MediaQuery.of(context).size.height/2.25,
                 decoration:const BoxDecoration(
-                  color: Color(0xFF6655F3),
+                  color: Color(0xFF00BDFF),
                 ),
               ),  
             ),
@@ -46,7 +41,7 @@ class WelcomeScreen extends StatelessWidget{
               alignment: Alignment.bottomCenter,
               child: Container(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height/2.666,
+                height: MediaQuery.of(context).size.height/2.25,
                 padding:const EdgeInsets.only(top:40, bottom: 30),
                 decoration:const BoxDecoration(
                   color: Colors.white,
@@ -59,31 +54,44 @@ class WelcomeScreen extends StatelessWidget{
                       style:TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
-                        color: Color(0xFF6655F3),
+                        color: Color(0xFF00BDFF),
                         letterSpacing: 1,
                         wordSpacing: 2,
                       ),
                       ),
-                      const SizedBox(height: 15,),
+                      const SizedBox(height: 20,),
+                      Column(
+                        children:[
+                          Image.asset('assets/images/Flutter.png',height: 60,),
+                        ],
+                      ),
+                      const SizedBox(height: 30,),
                       const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 40),
+                        padding: EdgeInsets.symmetric(horizontal: 50),
                         child: Text(
                           'Aprende a programar o muere en el intento',
                           style: TextStyle(
-                            fontSize: 17,
-                            color: Color(0xFF171520),
+                            fontFamily: 'Poppins',
+                            fontSize: 14,
+                            color: Color(0xFF6E717E),
+                            
                           ),
+                          textAlign: TextAlign.center,
                           ),
                         ),
-                      const SizedBox(height: 60),
+                      const SizedBox(height: 40),
                       Material(
-                        color:const  Color(0xFF6655F3),
-                        borderRadius:const BorderRadius.all(Radius.circular(20)),
-                        //borderRadius: BorderRadius. only(topLeft: Radius.circular(20)),
+                        color:const  Color(0xFF00BDFF),
+                        //borderRadius:const BorderRadius.all(Radius.circular(20)),
+                        borderRadius:const BorderRadius. only(
+                          topLeft: Radius.circular(20),
+                          bottomRight: Radius.circular(20),
+                          ),
+                        
                         child: InkWell(
                           onTap: (){
                             Navigator.push(context, MaterialPageRoute(
-                              builder: (context)=> HomeScreen()
+                              builder: (context)=> VistaHome()
                               ));
                           },
                           child: Container(
@@ -112,6 +120,6 @@ class WelcomeScreen extends StatelessWidget{
         ),
       ),
     );
-  }
 
+  }
 }
