@@ -46,27 +46,69 @@ class Alert extends StatelessWidget{
       builder: (BuildContext context){
         return AlertDialog(
           
-          title: const Text(
-            'Blog post published',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-           icon: const Icon(Icons.border_left, color: Colors.green, size: 100.0
-          ),
+          // title: const Text(
+          //   'Blog post published',
+          //   style: TextStyle(
+          //     color: Colors.black,
+          //     fontSize: 20,
+          //     fontWeight: FontWeight.w600,
+          //   ),
+          // ),
+          
+          
           backgroundColor: Colors.white,
-          content:const Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
+          content:const Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-            
-
-              SizedBox(width: 10),
-              Expanded(
-                child: Text(
-                  'Mollit nisi ullamco magna ex in enim reprehenderit aute veniam proident aliqua laboris.',
-                ),
+              
+              SizedBox(height: 10,),
+              Row(
+                children: [
+                  SizedBox(width: 10),
+                  SizedBox(
+                    child: Expanded(
+                      child: Icon(
+                        Icons.border_left,
+                        color: Colors.deepPurple,
+                        size: 100.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10,),
+              Row(
+                children: [
+                
+              
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                      'Blog post published.',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10,),
+              Row(
+                
+                children: [
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                      'Mollit nisi ullamco magna ex in enim reprehenderit aute veniam proident aliqua laboris.',
+                      style: TextStyle(
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
@@ -78,26 +120,34 @@ class Alert extends StatelessWidget{
               },
               style: OutlinedButton.styleFrom(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30.0),
+                  borderRadius: BorderRadius.circular(10.0),
                 ),
                 backgroundColor: Colors.white,
+                minimumSize:const Size(150, 40),
               ),
-              child: const Text('Cancelar'),
+              child: const Text('Cancel',style: TextStyle(color: Colors.black),),
             ),
             OutlinedButton(
               onPressed: () {
                 
               },
               style: OutlinedButton.styleFrom(
+                
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30.0),
+                  borderRadius: BorderRadius.circular(10.0),
                 ),
                 backgroundColor: Colors.deepPurple,
+                
+                minimumSize:const Size(150, 40),
               ),
               child: const Text(
-                'Aceptar',
-                style: TextStyle(color: Colors.white),
+                'Confirm',
+                style: TextStyle(color: Colors.white,
+                
+                ),
               ),
+              
+
             ),
           ],
         );
@@ -129,7 +179,7 @@ class Alert extends StatelessWidget{
             ),
             
             const Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              //scrossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(width: 0),
                 Expanded(
@@ -146,7 +196,7 @@ class Alert extends StatelessWidget{
               ],
             ),
             const Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(width: 0),
                 Expanded(
@@ -166,7 +216,7 @@ class Alert extends StatelessWidget{
             
             
             const Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(width: 0),
                 Expanded(
@@ -185,10 +235,11 @@ class Alert extends StatelessWidget{
             ),
             const SizedBox(height: 5),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(width: 0),
                  Expanded(
+
                   child: TextFormField(
                     decoration: const InputDecoration(
                       border: InputBorder.none,
