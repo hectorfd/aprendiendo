@@ -1,3 +1,4 @@
+import 'package:aprendiendo/vistas/paginas/componentes/componentes.dart';
 import 'package:aprendiendo/vistas/paginas/counter/counter_function.dart';
 import 'package:aprendiendo/vistas/paginas/counter/counter_screen.dart';
 import 'package:aprendiendo/vistas/paginas/dados/dados.dart';
@@ -27,6 +28,7 @@ class VistaHome extends StatelessWidget {
     'Preguntas',
     'TODO/Dart',
     'Vistas',
+    'Componentes',
   ];
 
   // Lista de colores
@@ -39,6 +41,7 @@ class VistaHome extends StatelessWidget {
     Color(0xFFCB84FB),
     Color(0xFF78E667),
     Color(0xFF46455F),
+    Color(0xFFFCDEE2),
   ];
 
   // Lista de iconos
@@ -51,6 +54,7 @@ class VistaHome extends StatelessWidget {
     Icon(Icons.play_circle_fill, color: Colors.white, size: 30),
     Icon(Icons.emoji_events, color: Colors.white, size: 30),
     Icon(Icons.app_registration_rounded, color: Colors.white, size: 30),
+    Icon(Icons.list, color: Colors.white, size: 30),
   ];
 
   // Lista de rutas
@@ -63,6 +67,7 @@ class VistaHome extends StatelessWidget {
     Preguntas(),
     TareasDart(),
     Design1(),
+    Componentes(),
   ];
 
   @override

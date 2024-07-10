@@ -38,6 +38,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   audioplayers: ^6.0.0
+  google_fonts: ^6.2.1 
 
 
 dev_dependencies:
@@ -87,6 +88,9 @@ flutter:
   - assets/images/C#.png
   - assets/images/picture1.jpeg
   - assets/images/logo-UTEA.png
+
+  - assets/images/loading.gif
+  - assets/images/persona1.jpg
   fonts:
     - family: Poppins
       fonts:
