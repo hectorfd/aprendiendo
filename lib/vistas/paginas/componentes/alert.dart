@@ -331,7 +331,7 @@ class Alert extends StatelessWidget{
       appBar: AppBar(
         title:const Text('Alert'),
         centerTitle: true,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.yellowAccent,
         ),
         body: Center(
           child: Column(
