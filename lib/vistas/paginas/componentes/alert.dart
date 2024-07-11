@@ -195,6 +195,7 @@ class Alert extends StatelessWidget{
                 ),
               ],
             ),
+            const SizedBox(height: 8),
             const Row(
               //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -235,38 +236,53 @@ class Alert extends StatelessWidget{
             ),
             const SizedBox(height: 5),
             Row(
-              //crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(width: 0),
-                 Expanded(
-
+                
+                Expanded(
                   child: TextFormField(
                     decoration: const InputDecoration(
-                      border: InputBorder.none,
-                      // prefixIcon: Icon(
-                      //   Icons.search,
-                      //   size: 25,
-                      // ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.grey),
+                      ),
+                      
+
                       hintText: 'untitledui.com/videos/porno',
                       hintStyle: TextStyle(
                         fontSize: 14,
                         color: Colors.black,
                       ),
                     ),
+                    
                   ),
                 ),
-                
-                IconButton(
-                  onPressed: (){
-                    
-                  },
-                  icon:const Icon(Icons.copy),
-                  
+                Container(
+                  margin: const EdgeInsets.only(left: 14.0),
+                  padding: const EdgeInsets.all(4.0),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey), 
+                    borderRadius: BorderRadius.circular(8.0), 
                   ),
-                  Title(color: Colors.black, child: const Text('copy link'))
+                  
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          
+                        },
+                        icon: const Icon(Icons.copy),
+                        
+                      ),
+                      
+                      const Text('copy link',style: TextStyle(fontSize: 15),),
+                      
+                    ],
+                  ),
+                ),
+
               ],
-              
-            ),
+            )
+
           ],
         ),
         actionsAlignment: MainAxisAlignment.center,
@@ -277,21 +293,24 @@ class Alert extends StatelessWidget{
             },
             style: OutlinedButton.styleFrom(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30.0),
+                borderRadius: BorderRadius.circular(10.0),
               ),
               backgroundColor: Colors.white,
+              minimumSize:const Size(150, 40),
             ),
-            child: const Text('Skip'),
+            child: const Text('Skip',style: TextStyle(color: Colors.black),),
           ),
+          
           OutlinedButton(
             onPressed: () {
               
             },
             style: OutlinedButton.styleFrom(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30.0),
+                borderRadius: BorderRadius.circular(10.0),
               ),
               backgroundColor: Colors.deepPurple,
+              minimumSize:const Size(150, 40),
             ),
             child: const Text(
               'Next',
