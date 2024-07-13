@@ -323,6 +323,228 @@ class Alert extends StatelessWidget{
   );
 
   }
+  showMyAlert4(BuildContext context){
+    return showDialog(
+      context: context,
+      builder: (BuildContext context){
+        return AlertDialog(
+          
+          
+          backgroundColor: Colors.white,
+          content:const Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              
+              SizedBox(height: 10,),
+              Row(
+                children: [
+                  SizedBox(width: 10),
+                  SizedBox(
+                    child: Expanded(
+                      child: Icon(
+                        Icons.playlist_add_circle,
+                        color: Color(0xFFF2E8FE),
+                        size: 70.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10,),
+              Row(
+                children: [
+                
+              
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                      'Share width people.',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 4,),
+              Row(
+                
+                children: [
+                  SizedBox(width: 4.0),
+                  Expanded(
+                    child: Text(
+                      'The following users have access.',
+                      style: TextStyle(
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          actionsAlignment: MainAxisAlignment.center,
+          actions: [
+            OutlinedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              style: OutlinedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                backgroundColor: Colors.white,
+                minimumSize:const Size(150, 40),
+              ),
+              child: const Text('Cancel',style: TextStyle(color: Colors.black),),
+            ),
+            OutlinedButton(
+              onPressed: () {
+                
+              },
+              style: OutlinedButton.styleFrom(
+                
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                backgroundColor: Colors.deepPurple,
+                
+                minimumSize:const Size(150, 40),
+              ),
+              child: const Text(
+                'Confirm',
+                style: TextStyle(color: Colors.white,
+                
+                ),
+              ),
+              
+
+            ),
+          ],
+        );
+
+      }
+      );
+  }
+
+  showMyAlert5(BuildContext context){
+    return showDialog(
+      context: context,
+      builder: (BuildContext context){
+        return AlertDialog(
+          
+          // title: const Text(
+          //   'Blog post published',
+          //   style: TextStyle(
+          //     color: Colors.black,
+          //     fontSize: 20,
+          //     fontWeight: FontWeight.w600,
+          //   ),
+          // ),
+          
+          
+          backgroundColor: Colors.white,
+          content:const Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              
+              SizedBox(height: 10,),
+              Row(
+                children: [
+                  SizedBox(width: 10),
+                  SizedBox(
+                    child: Expanded(
+                      child: Icon(
+                        Icons.border_left,
+                        color: Colors.deepPurple,
+                        size: 100.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10,),
+              Row(
+                children: [
+                
+              
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                      'Blog post published.',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10,),
+              Row(
+                
+                children: [
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                      'Mollit nisi ullamco magna ex in enim reprehenderit aute veniam proident aliqua laboris.',
+                      style: TextStyle(
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          actionsAlignment: MainAxisAlignment.center,
+          actions: [
+            OutlinedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              style: OutlinedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                backgroundColor: Colors.white,
+                minimumSize:const Size(150, 40),
+              ),
+              child: const Text('Cancel',style: TextStyle(color: Colors.black),),
+            ),
+            OutlinedButton(
+              onPressed: () {
+                
+              },
+              style: OutlinedButton.styleFrom(
+                
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                backgroundColor: Colors.deepPurple,
+                
+                minimumSize:const Size(150, 40),
+              ),
+              child: const Text(
+                'Confirm',
+                style: TextStyle(color: Colors.white,
+                
+                ),
+              ),
+              
+
+            ),
+          ],
+        );
+
+      }
+      );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -351,6 +573,16 @@ class Alert extends StatelessWidget{
                 showMyAlert3(context);
               }, 
               child:const Text('Alert 3'),
+              ),
+              ElevatedButton(onPressed: (){
+                showMyAlert4(context);
+              }, 
+              child:const Text('Alert 4'),
+              ),
+              ElevatedButton(onPressed: (){
+                showMyAlert5(context);
+              }, 
+              child:const Text('Alert 5'),
               ),
             ],
           ),

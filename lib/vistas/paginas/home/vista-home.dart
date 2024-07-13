@@ -46,15 +46,15 @@ class VistaHome extends StatelessWidget {
 
   // Lista de iconos
   final List<Icon> iconos = const [
-    Icon(Icons.assignment, color: Colors.white, size: 30),
-    Icon(Icons.assignment, color: Colors.white, size: 30),
-    Icon(Icons.plus_one, color: Colors.white, size: 30),
-    Icon(Icons.superscript, color: Colors.white, size: 30),
-    Icon(Icons.square, color: Colors.white, size: 30),
-    Icon(Icons.play_circle_fill, color: Colors.white, size: 30),
-    Icon(Icons.emoji_events, color: Colors.white, size: 30),
-    Icon(Icons.app_registration_rounded, color: Colors.white, size: 30),
-    Icon(Icons.list, color: Colors.white, size: 30),
+    Icon(Icons.assignment, color: Colors.white, size: 50),
+    Icon(Icons.assignment, color: Colors.white, size: 50),
+    Icon(Icons.plus_one, color: Colors.white, size: 50),
+    Icon(Icons.superscript, color: Colors.white, size: 50),
+    Icon(Icons.square, color: Colors.white, size: 50),
+    Icon(Icons.play_circle_fill, color: Colors.white, size: 50),
+    Icon(Icons.emoji_events, color: Colors.white, size: 50),
+    Icon(Icons.app_registration_rounded, color: Colors.white, size: 50),
+    Icon(Icons.list, color: Colors.white, size: 50),
   ];
 
   // Lista de rutas
@@ -72,15 +72,21 @@ class VistaHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Obtener el ancho y alto de la pantalla
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+    final Size screenSize = MediaQuery.of(context).size;
+    double iconSize = screenSize.width > 600 ? 32.0 : 24.0;
+
     return Scaffold(
       body: ListView(
         children: [
           Container(
-            padding: const EdgeInsets.only(
-              top: 15,
-              left: 15,
-              right: 15,
-              bottom: 10,
+            padding: EdgeInsets.only(
+              top: screenHeight * 0.02,
+              left: screenWidth * 0.04,
+              right: screenWidth * 0.04,
+              bottom: screenHeight * 0.01,
             ),
             decoration: const BoxDecoration(
               color: Color(0xFF00BDFF),
@@ -102,26 +108,26 @@ class VistaHome extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => const Inicio()),
                         );
                       },
-                      child: const Icon(
+                      child: Icon(
                         Icons.arrow_back,
-                        size: 40,
+                        size: iconSize * 1.7,
                         color: Colors.white,
                       ),
                     ),
-                    const Icon(
+                    Icon(
                       Icons.notifications,
-                      size: 40,
+                      size: iconSize * 1.7,
                       color: Colors.white,
                     ),
                   ],
                 ),
-                const SizedBox(height: 20),
-                const Padding(
-                  padding: EdgeInsets.only(left: 3, bottom: 15),
+                SizedBox(height: screenHeight * 0.02),
+                Padding(
+                  padding: EdgeInsets.only(left: screenWidth * 0.01, bottom: screenHeight * 0.02),
                   child: Text(
                     'Trabajos de Flutter',
                     style: TextStyle(
-                      fontSize: 25,
+                      fontSize: screenWidth * 0.07,
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
                       letterSpacing: 1,
@@ -130,24 +136,24 @@ class VistaHome extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 5, bottom: 20),
-                  width: MediaQuery.of(context).size.width,
-                  height: 55,
+                  margin: EdgeInsets.only(top: screenHeight * 0.01, bottom: screenHeight * 0.03),
+                  width: screenWidth,
+                  height: screenHeight * 0.07,
                   alignment: Alignment.center,
                   decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.all(Radius.circular(20)),
                   ),
                   child: TextFormField(
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       border: InputBorder.none,
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.search,
                         size: 25,
                       ),
                       hintText: 'ni lo intentes, aun no funciona xd',
                       hintStyle: TextStyle(
-                        fontSize: 20,
+                        fontSize: screenWidth * 0.04,
                         color: Colors.grey,
                       ),
                     ),
@@ -157,18 +163,18 @@ class VistaHome extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
+            padding: EdgeInsets.only(top: screenHeight * 0.02, left: screenWidth * 0.04, right: screenWidth * 0.04),
             child: Column(
               children: [
                 GridView.builder(
                   itemCount: tareas.length,
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 4,
-                    childAspectRatio: 1.1,
-                    mainAxisSpacing: 10,
-                    crossAxisSpacing: 10,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    childAspectRatio: 1,
+                    mainAxisSpacing: screenHeight * 0.02,
+                    crossAxisSpacing: screenWidth * 0.04,
                   ),
                   itemBuilder: (context, index) {
                     return GestureDetector(
@@ -179,25 +185,32 @@ class VistaHome extends StatelessWidget {
                         );
                       },
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            height: 60,
-                            width: 60,
+                            height: screenHeight * 0.08,
+                            width: screenHeight * 0.08,
                             decoration: BoxDecoration(
                               color: colores[index],
                               shape: BoxShape.circle,
                             ),
-                            child: Center(
-                              child: iconos[index],
+                            child: SizedBox(
+                              
+                              child: Center(
+                                
+                                child: iconos[index],
+                                
+                              ),
                             ),
                           ),
-                          const SizedBox(height: 10),
+                          SizedBox(height: screenHeight * 0.01),
                           Text(
                             tareas[index],
-                            style: const TextStyle(
-                              fontSize: 16,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: screenWidth * 0.035,
                               fontWeight: FontWeight.w600,
-                              color: Color(0XFF39434C),
+                              color: const Color(0XFF39434C),
                             ),
                           ),
                         ],
@@ -213,3 +226,6 @@ class VistaHome extends StatelessWidget {
     );
   }
 }
+
+
+
