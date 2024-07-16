@@ -92,6 +92,10 @@ flutter:
   - assets/images/loading.gif
   - assets/images/persona1.jpg
   - assets/images/persona2.jpg
+
+  - assets/images/c1.png
+  - assets/images/c2.png
+  - assets/images/c3.png
   fonts:
     - family: Poppins
       fonts:

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -374,6 +376,7 @@ class Alert extends StatelessWidget{
   );
 
   }
+
   showMyAlert4(BuildContext context){
     return showDialog(
       context: context,
@@ -651,121 +654,628 @@ class Alert extends StatelessWidget{
       );
   }
 
-  showMyAlert5(BuildContext context){
-    return showDialog(
-      context: context,
-      builder: (BuildContext context){
-        return AlertDialog(
-          
-          // title: const Text(
-          //   'Blog post published',
-          //   style: TextStyle(
-          //     color: Colors.black,
-          //     fontSize: 20,
-          //     fontWeight: FontWeight.w600,
-          //   ),
-          // ),
-          
-          
-          backgroundColor: Colors.white,
-          content:const Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              
-              SizedBox(height: 10,),
-              Row(
-                children: [
-                  SizedBox(width: 10),
-                  SizedBox(
-                    child: Expanded(
-                      child: Icon(
-                        Icons.border_left,
-                        color: Colors.deepPurple,
-                        size: 100.0,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 10,),
-              Row(
-                children: [
-                
-              
-                  SizedBox(width: 10),
-                  Expanded(
-                    child: Text(
-                      'Blog post published.',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 20,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 10,),
-              Row(
-                
-                children: [
-                  SizedBox(width: 10),
-                  Expanded(
-                    child: Text(
-                      'Mollit nisi ullamco magna ex in enim reprehenderit aute veniam proident aliqua laboris.',
-                      style: TextStyle(
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          actionsAlignment: MainAxisAlignment.center,
-          actions: [
-            OutlinedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              style: OutlinedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                backgroundColor: Colors.white,
-                minimumSize:const Size(150, 40),
-              ),
-              child: const Text('Cancel',style: TextStyle(color: Colors.black),),
-            ),
-            OutlinedButton(
-              onPressed: () {
-                
-              },
-              style: OutlinedButton.styleFrom(
-                
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                backgroundColor: Colors.deepPurple,
-                
-                minimumSize:const Size(150, 40),
-              ),
-              child: const Text(
-                'Confirm',
-                style: TextStyle(color: Colors.white,
-                
-                ),
-              ),
-              
+//alert 5
+showMyAlert5(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      int? _selectedValue;
+      final Size screenSize = MediaQuery.of(context).size;
+      final double scaleFactor = screenSize.width > 600 ? 1.5 : 1.0;
+      double iconSize = screenSize.width > 600 ? 32.0 : 24.0;
 
-            ),
-          ],
-        );
+      return StatefulBuilder(
+        builder: (BuildContext context, StateSetter setState) {
+          return AlertDialog(
+            backgroundColor: Colors.white,
+            content: SizedBox(
+              width: MediaQuery.of(context).size.width * 0.9,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  SizedBox(height: 10 * scaleFactor),
+                  Row(
+                    children: [
+                      SizedBox(width: 10 * scaleFactor),
+                      SizedBox(
+                        width: 70 * scaleFactor,
+                        height: 70 * scaleFactor,
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Color(0xFFF2E8FE),
+                          ),
+                          child: Expanded(
+                            child: Icon(
+                              Icons.payment,
+                              color: const Color(0xFFC47CFF),
+                              size: iconSize * 1.9,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10 * scaleFactor),
+                  Row(
+                    children: [
+                      SizedBox(width: 8 * scaleFactor),
+                      Expanded(
+                        child: Text(
+                          'Change your payment method.',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                            fontSize: scaleFactor * 18,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 4 * scaleFactor),
+                  Row(
+                    children: [
+                      SizedBox(width: 5.0 * scaleFactor),
+                      Expanded(
+                        child: Text(
+                          'Update your plan payment details.',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: scaleFactor * 17,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
 
-      }
+                  SizedBox(height: scaleFactor * 10),
+                  Container(
+                    //margen del contenedor
+                    //margin: EdgeInsets.symmetric(horizontal: 20 * scaleFactor),
+                   
+                   decoration: BoxDecoration(
+                    color:const Color(0xFFF8F4FF),
+                    borderRadius: BorderRadius.all(Radius.circular(10 *scaleFactor)),
+                    border: Border.all(
+                      color: Colors.grey, 
+                      width: 1.0, 
+                    ),
+                   ),
+                    child: Padding(
+                      padding: EdgeInsets.all(scaleFactor * 10),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 40 * scaleFactor, right: 10 * scaleFactor),
+                            child: Image(
+                              image: const AssetImage('assets/images/c3.png'),
+                              width: 30 * scaleFactor,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Visa ending in 1234',
+                                  style: TextStyle(fontSize: scaleFactor * 16, fontWeight: FontWeight.w500),
+                                ),
+                                Text(
+                                  'Expiry 06/2024',
+                                  style: TextStyle(fontSize: scaleFactor * 16, color: Colors.grey),
+                                ),
+                                Text(
+                                  'Set a default',
+                                  style: TextStyle(fontSize: scaleFactor * 16,color: Colors.grey),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 45 * scaleFactor),
+                            child: OutlinedButton(
+                              onPressed: () {},
+                              style: OutlinedButton.styleFrom(
+                                backgroundColor: Colors.transparent,
+                                side: BorderSide.none,
+                              ),
+                              child: Text(
+                                'Edit',
+                                style: TextStyle(
+                                    color: Colors.grey, fontWeight: FontWeight.w600, fontSize: scaleFactor * 16),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 40 * scaleFactor),
+                            child: Transform.scale(
+                              scale: 1.2 * scaleFactor, 
+                              child: Radio<int>(
+                                value: 1,
+                                groupValue: _selectedValue,
+                                onChanged: (int? value) {
+                                  setState(() {
+                                    _selectedValue = value;
+                                  });
+                                },
+                                activeColor: Colors.deepPurple,
+                                visualDensity: VisualDensity.compact,
+                                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                              ),
+                            ),
+                          ),
+                      
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: scaleFactor * 10),
+                  Container(
+                    //margen del contenedor
+                    //margin: EdgeInsets.symmetric(horizontal: 20 * scaleFactor),
+                   
+                   decoration: BoxDecoration(
+                    //color:const Color(0xFFF8F4FF),
+                    borderRadius: BorderRadius.all(Radius.circular(10 *scaleFactor)),
+                    border: Border.all(
+                      color: Colors.grey, 
+                      width: 1.0, 
+                    ),
+                   ),
+                    child: Padding(
+                      padding: EdgeInsets.all(scaleFactor * 10),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 40 * scaleFactor, right: 10 * scaleFactor),
+                            child: Image(
+                              image: const AssetImage('assets/images/c2.png'),
+                              width: 30 * scaleFactor,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Mastercard ',
+                                  style: TextStyle(fontSize: scaleFactor * 16, fontWeight: FontWeight.w500),
+                                ),
+                                Text(
+                                  'Expiry 06/2024',
+                                  style: TextStyle(fontSize: scaleFactor * 16, color: Colors.grey),
+                                ),
+                                Text(
+                                  'Set a default',
+                                  style: TextStyle(fontSize: scaleFactor * 16,color: Colors.grey),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 45 * scaleFactor),
+                            child: OutlinedButton(
+                              onPressed: () {},
+                              style: OutlinedButton.styleFrom(
+                                backgroundColor: Colors.transparent,
+                                side: BorderSide.none,
+                              ),
+                              child: Text(
+                                'Edit',
+                                style: TextStyle(
+                                    color: Colors.grey, fontWeight: FontWeight.w600, fontSize: scaleFactor * 16),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 40 * scaleFactor),
+                            child: Transform.scale(
+                              scale: 1.2 * scaleFactor, 
+                              child: Radio<int>(
+                                value: 1,
+                                groupValue: _selectedValue,
+                                onChanged: (int? value) {
+                                  setState(() {
+                                    _selectedValue = value;
+                                  });
+                                },
+                                activeColor: Colors.deepPurple,
+                                visualDensity: VisualDensity.compact,
+                                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                              ),
+                            ),
+                          ),
+                      
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: scaleFactor * 10),
+                  Container(
+                    //margen del contenedor
+                    //margin: EdgeInsets.symmetric(horizontal: 20 * scaleFactor),
+                   
+                   decoration: BoxDecoration(
+                    //color:const Color(0xFFF8F4FF),
+                    borderRadius: BorderRadius.all(Radius.circular(10 *scaleFactor)),
+                    border: Border.all(
+                      color: Colors.grey, 
+                      width: 1.0, 
+                    ),
+                   ),
+                    child: Padding(
+                      padding: EdgeInsets.all(scaleFactor * 10),
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 40 * scaleFactor, right: 10 * scaleFactor),
+                            child: Image(
+                              image: const AssetImage('assets/images/c1.png'),
+                              width: 30 * scaleFactor,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Visa ending in 1234',
+                                  style: TextStyle(fontSize: scaleFactor * 16, fontWeight: FontWeight.w500),
+                                ),
+                                Text(
+                                  'Expiry 06/2024',
+                                  style: TextStyle(fontSize: scaleFactor * 16, color: Colors.grey),
+                                ),
+                                Text(
+                                  'Set a default',
+                                  style: TextStyle(fontSize: scaleFactor * 16,color: Colors.grey),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 45 * scaleFactor),
+                            child: OutlinedButton(
+                              onPressed: () {},
+                              style: OutlinedButton.styleFrom(
+                                backgroundColor: Colors.transparent,
+                                side: BorderSide.none,
+                              ),
+                              child: Text(
+                                'Edit',
+                                style: TextStyle(
+                                    color: Colors.grey, fontWeight: FontWeight.w600, fontSize: scaleFactor * 16),
+                              ),
+                            ),
+                          ),
+                          const Spacer(),
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 40 * scaleFactor),
+                            child: Transform.scale(
+                              scale: 1.2 * scaleFactor, 
+                              child: Radio<int>(
+                                value: 1,
+                                groupValue: _selectedValue,
+                                onChanged: (int? value) {
+                                  setState(() {
+                                    _selectedValue = value;
+                                  });
+                                },
+                                activeColor: Colors.deepPurple,
+                                visualDensity: VisualDensity.compact,
+                                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                              ),
+                            ),
+                          ),
+                      
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: scaleFactor * 30),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          style: OutlinedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            backgroundColor: Colors.white,
+                            minimumSize: Size(1 * scaleFactor, 40 * scaleFactor),
+                            side: const BorderSide(color: Colors.grey),
+                          ),
+                          child: Text(
+                            'Cancel',
+                            style: TextStyle(fontSize: scaleFactor * 18, color: Colors.black),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 5 * scaleFactor, right: 5 * scaleFactor),
+                      ),
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: () {},
+                          style: OutlinedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ),
+                            backgroundColor: Colors.deepPurple,
+                            minimumSize: Size(1 * scaleFactor, 40 * scaleFactor),
+                            side: const BorderSide(color: Colors.grey),
+                          ),
+                          child: Text(
+                            'Confirm',
+                            style: TextStyle(fontSize: scaleFactor * 18, color: Colors.white),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          );
+        },
       );
-  }
+    },
+  );
+}
+
+
+  // showMyAlert5(BuildContext context){
+  //   return showDialog(
+  //     context: context,
+  //     builder: (BuildContext context){
+  //       int? _selectedValue;
+  //       final Size screenSize = MediaQuery.of(context).size;
+  //       final double scaleFactor = screenSize.width > 600 ? 1.5 : 1.0;
+  //       double iconSize = screenSize.width > 600 ? 32.0 : 24.0;
+  //       return AlertDialog(
+  //         backgroundColor: Colors.white,
+  //         content: SizedBox(
+  //           width: MediaQuery.of(context).size.width * 0.9, 
+
+  //           child: Column(
+  //             mainAxisSize: MainAxisSize.min,
+  //             mainAxisAlignment: MainAxisAlignment.start,
+  //             children: [
+                
+  //               SizedBox(height: 10* scaleFactor,),
+  //               Row(
+  //                 children: [
+  //                   SizedBox(width: 10*scaleFactor),
+  //                   SizedBox(
+  //                     //circulo
+  //                     width: 70*scaleFactor,
+  //                     height: 70*scaleFactor,
+  //                     //shape circulo
+  //                     child: Container(
+  //                       decoration: const BoxDecoration(
+  //                         shape: BoxShape.circle,
+  //                         color: Color(0xFFF2E8FE),
+  //                         //border: Border.all(color: Colors.blue, width: 2.0),
+  //                         ),
+                      
+  //                     child: Expanded(
+  //                       child: Icon(
+  //                         Icons.payment ,
+  //                         color:const Color(0xFFC47CFF),
+  //                         size: iconSize * 1.9,
+                          
+  //                       ),
+                        
+  //                     ),
+                      
+  //                   ),
+  //                   ),
+  //                 ],
+                  
+  //               ),
+  //               SizedBox(height: 10 * scaleFactor,),
+  //               Row(
+  //                 children: [
+  //                   SizedBox(width: 8 * scaleFactor),
+  //                   Expanded(
+  //                     child: Text(
+  //                       'Change your payment method.',
+  //                       style: TextStyle(
+  //                         color: Colors.black,
+  //                         fontWeight: FontWeight.w500,
+  //                         fontSize: scaleFactor * 18,
+  //                       ),
+  //                     ),
+  //                   ),
+  //                 ],
+  //               ),
+  //               SizedBox(height: 4 *scaleFactor,),
+  //               Row(
+                  
+  //                 children: [
+  //                   SizedBox(width: 5.0 * scaleFactor),
+  //                   Expanded(
+  //                     child: Text(
+  //                       'Update your plan payment details.',
+  //                       style: TextStyle(
+  //                         color: Colors.grey,
+  //                         fontSize: scaleFactor * 17,
+  //                       ),
+  //                     ),
+  //                   ),
+  //                 ],
+  //               ),
+  //               //sección de contactos
+  //               SizedBox(height: scaleFactor*20,),
+  //               Row(
+  //                 children: [
+  //                    Padding(
+  //                     //padding:const EdgeInsets.all(8.0),
+  //                     padding: EdgeInsets.only(bottom: 40 * scaleFactor, right: 10*scaleFactor),
+  //                     child: Image(
+                        
+  //                       image:const AssetImage('assets/images/c3.png'),
+  //                       //tamaño
+  //                       width: 30 * scaleFactor,
+
+                                  
+  //                     ),
+  //                   ),
+  //                   Padding(
+  //                     padding: const EdgeInsets.all(10.0),
+  //                     child: Column(
+  //                       crossAxisAlignment: CrossAxisAlignment.start,
+  //                       children: [
+  //                         Text('Visa ending in 1234',style: TextStyle(fontSize: scaleFactor * 16, fontWeight: FontWeight.w600),),
+  //                         Text('Expiry 06/2024',style: TextStyle(fontSize: scaleFactor * 16),),
+  //                         Text('Set a default',style: TextStyle(fontSize: scaleFactor * 16),),
+  //                       ],
+  //                     ),
+                      
+  //                   ),
+  //                   Padding(
+  //                     padding: EdgeInsets.only(top: 45 * scaleFactor),
+  //                     child: OutlinedButton(onPressed: (){},
+  //                     style: OutlinedButton.styleFrom(
+  //                       backgroundColor: Colors.transparent,
+  //                       side: BorderSide.none,
+  //                     ),
+  //                      child: Text('edit', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600, fontSize: scaleFactor * 16),)),
+  //                   ),
+  //                   const Spacer(),
+                    
+  //                   Padding(
+  //                       padding: EdgeInsets.only(bottom: 40 * scaleFactor),
+  //                       child: Radio<int>(
+  //                         value: 1,
+  //                         groupValue: _selectedValue,
+  //                         onChanged: (int? value) {
+  //                           setState(() {
+  //                             _selectedValue = value;
+  //                           });
+  //                         },
+                          
+  //                         activeColor: Colors.blue,
+  //                         visualDensity: VisualDensity.compact,
+  //                         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+  //                       ),
+  //                     ),
+  //                 ],
+  //               ),
+                
+  //               SizedBox(height: scaleFactor*30,),
+  //               Row(
+  //                 mainAxisAlignment: MainAxisAlignment.start,
+  //                 children: [
+  //                   Text('Team member',style: TextStyle(fontSize: 20 * scaleFactor),),
+  //                 ],
+  //               ),
+  //               SizedBox(height: scaleFactor*10,),
+  //               Row(
+  //                 children: [
+                    
+                    
+  //                   Expanded(
+  //                     child: Container(
+  //                       width: 200, 
+  //                       height: 50 * scaleFactor, 
+  //                       padding: EdgeInsets.symmetric(horizontal: 12 * scaleFactor),
+  //                       decoration: BoxDecoration(
+  //                         color: Colors.white, 
+  //                         borderRadius: BorderRadius.circular(10),
+  //                         border: Border.all(color: Colors.grey), 
+  //                       ),
+  //                       child: DropdownButtonHideUnderline(
+  //                         child: DropdownButton<String>(
+  //                           value: null, 
+  //                           hint: Row(
+  //                             children: [
+  //                               Icon(Icons.person , color: Colors.grey, size: iconSize * 1.4,), 
+  //                               SizedBox(width: 18 * scaleFactor),
+  //                               Text('Select team member', style: TextStyle(color: Colors.grey,fontSize: 20*scaleFactor)),
+  //                             ],
+  //                           ),
+  //                           items: <String>['Candy', 'Drew', 'Lana'].map((String value) {
+  //                             return DropdownMenuItem<String>(
+  //                               value: value,
+  //                               child: Text(value,style: TextStyle(fontSize: scaleFactor * 20),),
+  //                             );
+  //                           }).toList(),
+  //                           onChanged: (String? newValue) {
+                              
+  //                           },
+  //                           icon: Icon(Icons.arrow_drop_down, color: Colors.black, size: iconSize * 1.5,), 
+  //                           style: TextStyle(color: Colors.black, fontSize: 16 * scaleFactor), 
+  //                           dropdownColor: Colors.white, // Color del menú desplegable
+  //                         ),
+  //                       ),
+  //                     ),
+  //                   ),
+  //                 ],
+  //               ),
+  //               SizedBox(height: scaleFactor*30,),
+
+
+  //               Row(
+  //                 children: [
+  //                   Expanded(
+  //                     child:OutlinedButton(onPressed: (){
+  //                       Navigator.pop(context);
+  //                     },
+                      
+  //                     style: OutlinedButton.styleFrom(
+  //                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),
+  //                       ),
+  //                       backgroundColor: Colors.white,
+  //                       minimumSize:Size(1 * scaleFactor, 40 * scaleFactor),
+  //                       side:const BorderSide(color: Colors.grey),
+  //                       ),
+  //                      child: Text('Cancel', style: TextStyle(fontSize: scaleFactor * 18, color: Colors.black),
+                       
+  //                      ),
+                       
+  //                      ), 
+  //                   ),
+  //                   Padding(padding: 
+  //             EdgeInsets.only(left: 5 * scaleFactor, right: 5 * scaleFactor),
+  //             ),
+  //                   Expanded(
+  //                     child:OutlinedButton(onPressed: (){},
+  //                     style: OutlinedButton.styleFrom(
+  //                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0),
+  //                       ),
+  //                       backgroundColor: Colors.deepPurple,
+  //                       minimumSize:Size(1 * scaleFactor, 40 * scaleFactor),
+  //                       side:const BorderSide(color: Colors.grey),
+  //                       ),
+  //                      child: Text('Confirm', style: TextStyle(fontSize: scaleFactor * 18,color: Colors.white),
+  //                      ),
+  //                      ), 
+  //                   ),
+  //                 ],
+            
+  //               ),
+                
+                
+  //             ],
+  //           ),
+  //         ),
+            
+            
+  //       );
+
+  //     }
+  //     );
+  // }
 
   @override
   Widget build(BuildContext context) {
