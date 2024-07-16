@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Design4 extends StatelessWidget {
-  const Design4({Key? key}) : super(key: key);
+  const Design4({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -65,7 +65,7 @@ class Design1 extends StatelessWidget {
         'icon': Icons.newspaper,
         'title': 'practica1',
         'subtitle': 'Autor: Hector',
-        'route': const Design9(),
+        'route': Design9(),
       },
       
     ];
