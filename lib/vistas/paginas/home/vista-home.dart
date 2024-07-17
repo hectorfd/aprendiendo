@@ -6,6 +6,7 @@ import 'package:aprendiendo/vistas/paginas/disenios/desing1.dart';
 import 'package:aprendiendo/vistas/paginas/estructura/estructura.dart';
 import 'package:aprendiendo/vistas/paginas/estructura2/maqueta2.dart';
 import 'package:aprendiendo/vistas/paginas/home/home.dart';
+import 'package:aprendiendo/vistas/paginas/imc/imc.dart';
 import 'package:aprendiendo/vistas/paginas/maqueta/home_screen.dart';
 import 'package:aprendiendo/vistas/paginas/practica/practica.dart';
 import 'package:aprendiendo/vistas/paginas/preguntas/preguntas.dart';
@@ -29,6 +30,7 @@ class VistaHome extends StatelessWidget {
     'TODO/Dart',
     'Vistas',
     'Componentes',
+    'IMC App',
   ];
 
   // Lista de colores
@@ -42,6 +44,7 @@ class VistaHome extends StatelessWidget {
     Color(0xFF78E667),
     Color(0xFF46455F),
     Color(0xFFFCDEE2),
+    Color(0xFF356952),
   ];
 
   // Lista de iconos
@@ -55,6 +58,7 @@ class VistaHome extends StatelessWidget {
     Icon(Icons.emoji_events, color: Colors.white, size: 50),
     Icon(Icons.app_registration_rounded, color: Colors.white, size: 50),
     Icon(Icons.list, color: Colors.white, size: 50),
+    Icon(Icons.sports_gymnastics , color: Colors.white, size: 50),
   ];
 
   // Lista de rutas
@@ -68,6 +72,7 @@ class VistaHome extends StatelessWidget {
     TareasDart(),
     Design1(),
     Componentes(),
+    Imc(),
   ];
 
   @override

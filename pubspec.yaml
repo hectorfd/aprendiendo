@@ -96,6 +96,11 @@ flutter:
   - assets/images/c1.png
   - assets/images/c2.png
   - assets/images/c3.png
+
+  - assets/images/image1.png
+  - assets/images/image2.png
+  - assets/images/image3.png
+  - assets/images/image4.png
   fonts:
     - family: Poppins
       fonts:
