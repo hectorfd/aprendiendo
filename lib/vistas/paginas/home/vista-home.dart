@@ -41,7 +41,7 @@ class VistaHome extends StatelessWidget {
     Color(0xFF61BDFD),
     Color(0xFFFC7C7F),
     Color(0xFFCB84FB),
-    Color(0xFF78E667),
+    Color(0xFFF20505),
     Color(0xFF46455F),
     Color(0xFFFCDEE2),
     Color(0xFF356952),
