@@ -11,7 +11,7 @@ class App8 extends StatelessWidget{
       final double iconSize = screenSize.width > 600 ? 32.0 : 24.0;
     return Scaffold(
       appBar: AppBar(
-        title:Text('App 8 Hira Riaz', style: GoogleFonts.poppins(color: Colors.grey, fontSize: scaleFactor * 25),),
+        title:Text('App 8 Hira Riaz', style: GoogleFonts.poppins(color: Colors.grey, fontSize: scaleFactor * 25, fontWeight: FontWeight.w600),),
 
       ),
     );
