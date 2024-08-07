@@ -13,15 +13,16 @@ class App8 extends StatelessWidget{
       backgroundColor:const Color(0xFFF3F8FE),
       appBar: AppBar(
         title:Text('App 8 Hira Riaz', style: GoogleFonts.poppins(color: Colors.grey, fontSize: scaleFactor * 25, fontWeight: FontWeight.w600),),
-
+        centerTitle: true,
       ),
       body: SafeArea(child:Padding(
         padding: EdgeInsets.all(8.0 * scaleFactor),
         child: Column(
             children: [
               Container(
+                padding: EdgeInsets.all(scaleFactor * 14),
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(16 * scaleFactor),
                   boxShadow: [BoxShadow(color: Colors.black45, offset: Offset(0, 7), blurRadius: 16 * scaleFactor)],
         
@@ -31,8 +32,8 @@ class App8 extends StatelessWidget{
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Icon(Icons.align_horizontal_left,),
-                        Icon(Icons.more_vert,)
+                        Icon(Icons.align_horizontal_left,size: iconSize * 0.8,),
+                        Icon(Icons.more_vert,size: iconSize * 0.8,)
                       ],
                     )
                   ],
