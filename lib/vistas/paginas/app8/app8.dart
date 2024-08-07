@@ -44,8 +44,46 @@ class App8 extends StatelessWidget{
                       radius: 48 * scaleFactor,
                     ),
                     SizedBox(height: 24 * scaleFactor,),
-                    Text('Hira Riaz', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: scaleFactor * 26, color: Color(0xFF3E4685)),),
-                    Text('UX/UI Designer', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: scaleFactor * 12, color: Color(0xFF767676)),),
+                    Text('Hira Riaz', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: scaleFactor * 26, color:const Color(0xFF3E4685)),),
+                    Text('UX/UI Designer', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: scaleFactor * 12, color:const Color(0xFF767676)),),
+                    SizedBox(height: 24 * scaleFactor,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            Text("\$8900", style: TextStyle(color: const Color(0xFF3E4685), fontSize: 16 * scaleFactor, fontWeight: FontWeight.bold),),
+                            Text("Income"),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 40 * scaleFactor,
+                          width: 30 * scaleFactor,
+                          child: VerticalDivider(
+                            color: Colors.black.withOpacity(0.25),
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Text("\$5500", style: TextStyle(color: const Color(0xFF3E4685), fontSize: 16 * scaleFactor, fontWeight: FontWeight.bold),),
+                            Text("Expenses"),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 40 * scaleFactor,
+                          width: 30 * scaleFactor,
+                          child: VerticalDivider(
+                            color: Colors.black.withOpacity(0.25),
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Text("\$890", style: TextStyle(color: const Color(0xFF3E4685), fontSize: 16 * scaleFactor, fontWeight: FontWeight.bold),),
+                            Text("Loan"),
+                          ],
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
