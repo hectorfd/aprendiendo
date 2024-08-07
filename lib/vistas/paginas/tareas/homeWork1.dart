@@ -39,7 +39,7 @@ class _Homework1State extends State<Homework1> {
         leading: IconButton(onPressed: (){
           Navigator.pop(context);
         }, icon: Icon(Icons.arrow_back, size: iconSize * 1.6,color: Colors.white,),),
-        title: Text('Calcular Sueldo', style: TextStyle(fontSize:scaleFactor * 22 ,color: Colors.white)),
+        title: Text('Calcular (+ - *)', style: TextStyle(fontSize:scaleFactor * 22 ,color: Colors.white)),
         backgroundColor: Colors.black87,
       ),
       body: SingleChildScrollView(
@@ -47,7 +47,7 @@ class _Homework1State extends State<Homework1> {
         child: Column(
           children: [
               ListTile(
-                leading: Text('1', style: GoogleFonts.abel(fontSize: 22 * scaleFactor),),
+                leading: Text('1)', style: GoogleFonts.abel(fontSize: 22 * scaleFactor),),
                 title: Text('Hacer un programa para calcular la suma, diferencia y producto de dos números.', style: GoogleFonts.aBeeZee(fontSize: scaleFactor * 22),),
               ),
               SizedBox(height: scaleFactor * 20,),
