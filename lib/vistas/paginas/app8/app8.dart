@@ -36,11 +36,16 @@ class App8 extends StatelessWidget{
                         Icon(Icons.more_vert,size: iconSize * 0.8,)
                       ],
                     ),
+                    SizedBox(height: 24 * scaleFactor,),
+                    
                     CircleAvatar(
                       backgroundImage: NetworkImage("https://images.pexels.com/photos/2787341/pexels-photo-2787341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
                       backgroundColor: Colors.amber,
                       radius: 48 * scaleFactor,
                     ),
+                    SizedBox(height: 24 * scaleFactor,),
+                    Text('Hira Riaz', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: scaleFactor * 26, color: Color(0xFF3E4685)),),
+                    Text('UX/UI Designer', style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: scaleFactor * 12, color: Color(0xFF767676)),),
                   ],
                 ),
               ),
