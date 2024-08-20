@@ -58,7 +58,7 @@ class Componentes extends StatelessWidget {
       {'title': 'Alert', 'subtitle': 'Ir al detalle de Alert', 'view': const Alert()},
       {'title': 'Cards', 'subtitle': 'Ir al detalle de Cards', 'view': const Cards()},
       {'title': 'Inputs', 'subtitle': 'Ir al detalle de Inputs', 'view': const Input()},
-      {'title': 'Lists', 'subtitle': 'Ir al detalle de Lists', 'view': const Listas()},
+      {'title': 'Lists', 'subtitle': 'Ir al detalle de Lists', 'view':   Listas()},
     ];
 
     return buttons.map((button) {
