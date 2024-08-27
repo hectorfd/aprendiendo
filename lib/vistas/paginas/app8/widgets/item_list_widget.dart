@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ItemListWidget extends StatelessWidget {
-  const ItemListWidget({super.key});
+  //ItemListWidget({super.key});
+  Map<String, dynamic> item;
+
+  ItemListWidget({required this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -30,19 +33,19 @@ class ItemListWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(18.0),
               color: const Color(0xff3d4584).withOpacity(0.12),
             ),
-            child: const Icon(
-              Icons.arrow_upward,
+            child:  Icon(
+              item["icon"],
             ),
           ),
           const SizedBox(
             width: 10,
           ),
-          const Expanded(
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Sent",
+                  item["type"],
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
@@ -54,7 +57,7 @@ class ItemListWidget extends StatelessWidget {
                   height: 2,
                 ),
                 Text(
-                  "Sending Payment to Clients",
+                  item["description"],
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
@@ -66,8 +69,8 @@ class ItemListWidget extends StatelessWidget {
               ],
             ),
           ),
-          const Text(
-            "\$150",
+          Text(
+            "\$ "+ item["Price"].toString(),
             style: TextStyle(
               fontWeight: FontWeight.bold,
             ),

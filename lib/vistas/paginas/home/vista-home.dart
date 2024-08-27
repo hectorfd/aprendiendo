@@ -70,7 +70,7 @@ class VistaHome extends StatelessWidget {
   ];
 
   // Lista de rutas
-  final List<Widget> rutas = const[
+  final List<Widget> rutas = [
     Estructura(),
     Practica(),
     CounterScreen(),
