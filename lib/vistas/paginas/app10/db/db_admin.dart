@@ -5,30 +5,54 @@ import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
 class DbAdmin {
-  static final DbAdmin _instance = DbAdmin._internal();
   Database? myDatabase;
 
-  // Singleton
-  static DbAdmin get db => _instance;
+  //Singleton
+  static final DbAdmin db = DbAdmin.instance();
 
-  DbAdmin._internal();
+  DbAdmin.instance();
 
-  Future<Database?> initDatabase() async {
+  Future<Database?> checkDatabase() async {
     if (myDatabase != null) {
       return myDatabase;
     }
 
+    myDatabase = await initDatabase();
+    return myDatabase;
+  }
+
+  Future<Database> initDatabase() async {
     Directory directory = await getApplicationDocumentsDirectory();
     String path = join(directory.path, "TaskDB.db");
-    print("Creando base de datos !!!!");
-    myDatabase = await openDatabase(
+    print("creando base de datos !!!!");
+    return await openDatabase(
       path,
       version: 1,
       onOpen: (db) {},
       onCreate: (Database dbx, int version) async {
-        await dbx.execute("CREATE TABLE TASK(id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, description TEXT, status TEXT, otro TEXT)");
+        await dbx.execute(
+            "CREATE TABLE TASK(id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, description TEXT, status TEXT)");
       },
     );
-    return myDatabase;
+  }
+
+  insertRawTask() async {
+    Database? db = await checkDatabase();
+    int res = await db!.rawInsert(
+        "INSERT INTO TASK(title, description, status) VALUES('Ir a la U','Para apoyar a la huelga', 'Incompleto')");
+    print(res);
+  }
+
+  insertTask() async {
+    Database? db = await checkDatabase();
+    int res = await db!.insert(
+      "TASK",
+      {
+        "title":"Ir al mercado",
+        "description" : "Comprar viveres para la huelga",
+        "status" : "no realizado",
+      },
+    );
+    print(res);
   }
 }

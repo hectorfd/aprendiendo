@@ -15,11 +15,19 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              onPressed: () async {
-                await DbAdmin.db.initDatabase();
-                print("Base de datos creada exitosamente");
+              onPressed: () {
+                DbAdmin.db.initDatabase();
+                print("Creando base de datos");
               },
               child: Text("Mostrar data"),
+            ),
+
+            ElevatedButton(
+              onPressed: () {
+                DbAdmin.db.insertTask();
+                print("Tarea insertada!!");
+              },
+              child: Text("Insertar Task"),
             ),
           ],
         ),
