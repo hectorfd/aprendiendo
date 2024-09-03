@@ -16,8 +16,8 @@ class HomePage extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                DbAdmin.db.initDatabase();
-                print("Creando base de datos");
+                DbAdmin.db.getRawTask();
+                
               },
               child: Text("Mostrar data"),
             ),
