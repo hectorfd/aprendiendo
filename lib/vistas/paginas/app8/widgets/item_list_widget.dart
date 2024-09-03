@@ -4,7 +4,7 @@ class ItemListWidget extends StatelessWidget {
   //ItemListWidget({super.key});
   Map<String, dynamic> item;
 
-  ItemListWidget({required this.item});
+  ItemListWidget({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -48,19 +48,19 @@ class ItemListWidget extends StatelessWidget {
                   item["type"],
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 14.0,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 2,
                 ),
                 Text(
                   item["description"],
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.normal,
                     fontSize: 11.0,
                     color: Colors.black54,
@@ -70,8 +70,8 @@ class ItemListWidget extends StatelessWidget {
             ),
           ),
           Text(
-            "\$ "+ item["Price"].toString(),
-            style: TextStyle(
+            "\$ ${item["Price"]}",
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
             ),
           )

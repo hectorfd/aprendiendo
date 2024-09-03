@@ -1,15 +1,6 @@
 
-import 'package:aprendiendo/vistas/paginas/counter/counter_function.dart';
-import 'package:aprendiendo/vistas/paginas/counter/counter_screen.dart';
-import 'package:aprendiendo/vistas/paginas/dados/dados.dart';
-import 'package:aprendiendo/vistas/paginas/estructura2/maqueta2.dart';
 import 'package:aprendiendo/vistas/paginas/home/home.dart';
-import 'package:aprendiendo/vistas/paginas/maqueta/welcome_screen.dart';
-import 'package:aprendiendo/vistas/paginas/practica/practica.dart';
-import 'package:aprendiendo/vistas/paginas/preguntas/preguntas.dart';
-import 'package:aprendiendo/vistas/paginas/xilofono/xilofono.dart';
 import 'package:flutter/material.dart';
-import 'package:aprendiendo/vistas/paginas/estructura/estructura.dart';
 
 void main(){
   runApp(const MyApp()); 

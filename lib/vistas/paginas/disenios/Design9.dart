@@ -36,20 +36,20 @@ class _Design9State extends State<Design9> {
     return Expanded(
       child: OutlinedButton(
         onPressed: () => _buttonPressed(buttonText),
-        child: Text(
-          buttonText,
-          style: TextStyle(fontSize: 20.0),
-        ),
         style: OutlinedButton.styleFrom(
-          padding: EdgeInsets.all(24.0),
+          padding: const EdgeInsets.all(24.0),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(0.0),
           ),
-          side: BorderSide(
+          side: const BorderSide(
             color: Colors.black,
             width: 1.0,
           ),
           backgroundColor: buttonColor,
+        ),
+        child: Text(
+          buttonText,
+          style: TextStyle(fontSize: 20.0),
         ),
       ),
     );
@@ -59,16 +59,16 @@ class _Design9State extends State<Design9> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Calculadora'),
+        title: const Text('Calculadora'),
       ),
       body: Column(
         children: <Widget>[
           Container(
             alignment: Alignment.centerRight,
-            padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
+            padding: const EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
             child: Text(
               _output,
-              style: TextStyle(fontSize: 48.0, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 48.0, fontWeight: FontWeight.bold),
             ),
           ),
           Expanded(
@@ -123,7 +123,7 @@ class _Design9State extends State<Design9> {
   }
 }
 
-void main() => runApp(MaterialApp(
+void main() => runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Design9(),
     ));

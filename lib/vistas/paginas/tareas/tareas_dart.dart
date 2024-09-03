@@ -17,7 +17,7 @@ class TareasDart extends StatelessWidget{
       //double screenHeight = screenSize.height;
       double iconSize = screenSize.width > 600 ? 32.0 : 24.0;
      return Scaffold(
-      backgroundColor: Color(0xFF400101),
+      backgroundColor: const Color(0xFF400101),
       
       appBar: AppBar(
         toolbarHeight: scaleFactor * 50,
@@ -38,7 +38,7 @@ class TareasDart extends StatelessWidget{
             SizedBox(height: 20 * scaleFactor),
             InkWell(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Homework1()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Homework1()));
               },
               child: Card(
                 color:const Color(0xFF516B8C),
@@ -54,7 +54,7 @@ class TareasDart extends StatelessWidget{
             SizedBox(height: 20 * scaleFactor),
             InkWell(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Homework2()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Homework2()));
               },
               child: Card(
                 color:const Color(0xFF516B8C),
@@ -70,7 +70,7 @@ class TareasDart extends StatelessWidget{
             SizedBox(height: 20 * scaleFactor),
             InkWell(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Inputs()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Inputs()));
               },
               child: Card(
                 color:const Color(0xFF516B8C),

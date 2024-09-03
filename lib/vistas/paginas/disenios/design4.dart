@@ -10,7 +10,7 @@ class Design4 extends StatelessWidget {
     final double scaleFactor = screenSize.width > 600 ? 1.5 : 1.0;
     double iconSize = screenSize.width > 600 ? 32.0 : 24.0;
 
-    final ScrollController _scrollController = ScrollController();
+    final ScrollController scrollController = ScrollController();
 
     return Scaffold(
       appBar: AppBar(
@@ -54,7 +54,7 @@ class Design4 extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        controller: _scrollController,
+        controller: scrollController,
         child: Padding(
           padding: EdgeInsets.all(scaleFactor * 30),
           child: Column(
@@ -198,8 +198,8 @@ class Design4 extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          _scrollController.animateTo(
-            _scrollController.position.maxScrollExtent,
+          scrollController.animateTo(
+            scrollController.position.maxScrollExtent,
             duration:const Duration(milliseconds: 500),
             curve: Curves.easeInOut,
           );

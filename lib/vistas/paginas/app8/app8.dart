@@ -60,7 +60,7 @@ class App8 extends StatelessWidget{
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding:  EdgeInsets.all(16.0),
+            padding:  const EdgeInsets.all(16.0),
             child: Column(
               children: [
                 Container(
@@ -78,7 +78,7 @@ class App8 extends StatelessWidget{
                   ),
                   child: Column(
                     children: [
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Icon(
@@ -93,20 +93,20 @@ class App8 extends StatelessWidget{
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 24.0,
                       ),
-                      CircleAvatar(
+                      const CircleAvatar(
                         backgroundImage: NetworkImage(
                           "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                         ),
                         backgroundColor: Colors.amber,
                         radius: 48.0,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 24.0,
                       ),
-                      Text(
+                      const Text(
                         "Hira Riaz",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -114,7 +114,7 @@ class App8 extends StatelessWidget{
                           color: Color(0xff1b263b),
                         ),
                       ),
-                      Text(
+                      const Text(
                         "UX/UI Designer",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -122,13 +122,13 @@ class App8 extends StatelessWidget{
                           color: Colors.black87,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 24.0,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Column(
+                          const Column(
                             children: [
                               Text(
                                 "\$8900",
@@ -148,7 +148,7 @@ class App8 extends StatelessWidget{
                               color: Colors.black.withOpacity(0.3),
                             ),
                           ),
-                          Column(
+                          const Column(
                             children: [
                               Text(
                                 "\$8900",
@@ -168,7 +168,7 @@ class App8 extends StatelessWidget{
                               color: Colors.black.withOpacity(0.3),
                             ),
                           ),
-                          Column(
+                          const Column(
                             children: [
                               Text(
                                 "\$8900",
@@ -186,10 +186,10 @@ class App8 extends StatelessWidget{
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20.0,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
@@ -221,12 +221,12 @@ class App8 extends StatelessWidget{
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 22.0,
                 ),
                 ListView.builder(
                   shrinkWrap: true,
-                  physics: ScrollPhysics(),
+                  physics: const ScrollPhysics(),
                   itemCount: data.length,
                   itemBuilder: (BuildContext context, int index) {
                     return ItemListWidget(

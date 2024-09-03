@@ -1,7 +1,7 @@
 import 'dart:io';
 //calcular el tiempo cuando se aumenta t segundos
 void main(List<String>args){
-  int partida_en_segundos, llegada, horaL, minutoL, segundoL;
+  int partidaEnSegundos, llegada, horaL, minutoL, segundoL;
   print('Ingrese horas, minutos y segundos');
   print('Ingrese la hora');
   var v1 = stdin.readLineSync();
@@ -18,9 +18,9 @@ void main(List<String>args){
       int segundos = int.parse(v3);
       int T = int.parse(v4);
       //convirtiendo horas y minutos a segundos
-      partida_en_segundos = horas * 3600 + minutos * 60 + segundos;
+      partidaEnSegundos = horas * 3600 + minutos * 60 + segundos;
       //sumando partida en segundos con los t segundos
-      llegada = partida_en_segundos + T;
+      llegada = partidaEnSegundos + T;
       //convirtiendo segundos a horas minutos y segundos restantes
       horaL = (llegada ~/ 3600)% 24;
       minutoL = (llegada % 3600)~/ 60;

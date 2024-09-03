@@ -10,7 +10,7 @@ class MyDrawerWidget extends StatelessWidget {
     return Drawer(
       child: Column(
         children: [
-          DrawerHeader(
+          const DrawerHeader(
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,
@@ -56,29 +56,29 @@ class MyDrawerWidget extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (contex) => MyProfilePage(),
+                  builder: (contex) => const MyProfilePage(),
                 ),
               );
             },
-            leading: Icon(
+            leading: const Icon(
               Icons.person,
               color: Colors.black54,
             ),
-            title: Text("My Profile"),
+            title: const Text("My Profile"),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.file_copy),
             title: Text("Portafolio"),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.lock),
             title: Text("Change Password"),
           ),
-          Divider(
+          const Divider(
             indent: 12,
             endIndent: 12,
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text("Logout"),
           ),

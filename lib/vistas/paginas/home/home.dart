@@ -61,7 +61,7 @@ class Inicio extends StatelessWidget {
                       style: TextStyle(
                         fontSize: screenWidth * 0.065,
                         fontWeight: FontWeight.bold,
-                        color: Color(0xFF00BDFF),
+                        color: const Color(0xFF00BDFF),
                         letterSpacing: 1,
                         wordSpacing: 2,
                       ),
@@ -80,7 +80,7 @@ class Inicio extends StatelessWidget {
                         style: TextStyle(
                           fontFamily: 'Poppins',
                           fontSize: screenWidth * 0.035,
-                          color: Color(0xFF6E717E),
+                          color: const Color(0xFF6E717E),
                         ),
                         textAlign: TextAlign.center,
                       ),

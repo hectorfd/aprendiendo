@@ -36,8 +36,7 @@ class Cuenta {
 
 class CuentaJoven extends Cuenta {
   double bonificacion;
-  CuentaJoven({required Persona titular, double cantidad = 0.0, this.bonificacion = 0.0})
-      : super(titular: titular, cantidad: cantidad);
+  CuentaJoven({required super.titular, super.cantidad, this.bonificacion = 0.0});
   double get getBonificacion => bonificacion;
   set setBonificacion(double bonificacion) {
     this.bonificacion = bonificacion;

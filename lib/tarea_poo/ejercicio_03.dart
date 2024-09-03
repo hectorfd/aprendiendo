@@ -56,10 +56,10 @@ Cuenta(this.nombre, this.dni, this.cantidad);
   }
 
   String get getNombre => nombre;
-  void set setNombre(String nombre) => this.nombre = nombre;
+  set setNombre(String nombre) => this.nombre = nombre;
 
   double get getCantidad => cantidad;
-  void set setCantidad(double cantidad) => this.cantidad = cantidad;
+  set setCantidad(double cantidad) => this.cantidad = cantidad;
 
 }
 void main(List<String>args){

@@ -1,7 +1,6 @@
 import 'dart:io';
 //6. Hacer un programa que calcule el ángulo en grados centesimales
 //   y radiales si tenemos grados sexagesimales.
-import 'dart:math';
 
 void main(List<String>args){
   double  centesimales, radiales;

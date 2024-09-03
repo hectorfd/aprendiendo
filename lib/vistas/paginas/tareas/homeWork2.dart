@@ -69,11 +69,11 @@ class _Homework2State extends State<Homework2> {
                         labelStyle: TextStyle(fontSize: scaleFactor * 22),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: Colors.black87, width: 2.0),
+                          borderSide: const BorderSide(color: Colors.black87, width: 2.0),
                           ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                          borderSide: const BorderSide(color: Colors.blue, width: 2.0),
                           ),
                           
                         ),
@@ -97,11 +97,11 @@ class _Homework2State extends State<Homework2> {
                         labelStyle: TextStyle(fontSize: scaleFactor * 22),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: Colors.black87, width: 2.0),
+                          borderSide: const BorderSide(color: Colors.black87, width: 2.0),
                           ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                          borderSide: const BorderSide(color: Colors.blue, width: 2.0),
                           ),
                           
                         ),
@@ -124,11 +124,11 @@ class _Homework2State extends State<Homework2> {
                         labelStyle: TextStyle(fontSize: scaleFactor * 22),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: Colors.black87, width: 2.0),
+                          borderSide: const BorderSide(color: Colors.black87, width: 2.0),
                           ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
-                          borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                          borderSide: const BorderSide(color: Colors.blue, width: 2.0),
                           ),
                           
                         ),

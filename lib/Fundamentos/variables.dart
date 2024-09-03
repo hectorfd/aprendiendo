@@ -14,7 +14,7 @@ void main(List<String>arguments){
   print('DNI: $dni, Nombre: $name, Mide: $estatura, Varón: $macho');
   
   // para variables que no cambian
-  final double igv = 0.18;
+  const double igv = 0.18;
   print(100 * igv);
   String num = '''
     uno

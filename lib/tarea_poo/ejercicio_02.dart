@@ -1,4 +1,3 @@
-import 'dart:math';
 class Persona{
   String nombre;
   int edad;

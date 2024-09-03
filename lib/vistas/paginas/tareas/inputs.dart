@@ -80,7 +80,7 @@ class Inputs extends StatelessWidget{
             SizedBox(height: 20 * scaleFactor,),
             Text('Dropdown', style: TextStyle(fontSize: scaleFactor * 22),),
 
-            Container(
+            SizedBox(
               width: 300 *scaleFactor, // Ancho personalizado
               child: DropdownButton<String>(
                 value: 'Opción 1',

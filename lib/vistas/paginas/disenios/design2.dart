@@ -29,10 +29,10 @@ class Design2 extends StatelessWidget{
           const Positioned.fill(
             top: 480,
             child: Padding(
-              padding: const EdgeInsets.all(30),
+              padding: EdgeInsets.all(30),
               child: Text(
                 'Cillum commodo excepteur non velit do cillum ullamco. Magna Lorem ex et reprehenderit adipisicing veniam culpa fugiat nulla. Commodo occaecat do proident ad. Proident culpa occaecat consectetur ullamco eu eu eu culpa occaecat consectetur ullamco.',
-                style: const TextStyle(
+                style: TextStyle(
                   color: Color(0xFF828287),
                   fontSize: 18,
                   fontWeight: FontWeight.w400,

@@ -54,8 +54,8 @@ class Design3 extends StatelessWidget{
             right: 20,
             child: ElevatedButton(
               style:const ButtonStyle(
-                backgroundColor:const WidgetStatePropertyAll<Color>(Colors.white),
-                foregroundColor:const WidgetStatePropertyAll<Color>(Colors.green),
+                backgroundColor:WidgetStatePropertyAll<Color>(Colors.white),
+                foregroundColor:WidgetStatePropertyAll<Color>(Colors.green),
             
                
               ),

@@ -1,7 +1,7 @@
 
 import 'dart:io';
 void main(List<String>args){
-final double pension = 1500;
+const double pension = 1500;
 double descuento,pago;
 print('Ingrese el promedio del alumno');
 var n = stdin.readLineSync();

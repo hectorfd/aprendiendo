@@ -102,7 +102,7 @@ class _ImcState extends State<Imc> {
                   Text('${_peso.toInt()}', style: TextStyle(fontSize: 30*scaleFactor, fontWeight: FontWeight.w400),),
                   Padding(
                     padding: EdgeInsets.only(top: 8 * scaleFactor),
-                    child: Text('kg', style: TextStyle(fontSize:scaleFactor * 18, color: Color(0xFF555768), fontWeight: FontWeight.w300 ),),
+                    child: Text('kg', style: TextStyle(fontSize:scaleFactor * 18, color: const Color(0xFF555768), fontWeight: FontWeight.w300 ),),
                   ),
                 ],
               ),
@@ -143,7 +143,7 @@ class _ImcState extends State<Imc> {
                   Text('${_altura.toInt()}', style: TextStyle(fontSize: 30*scaleFactor, fontWeight: FontWeight.w400),),
                   Padding(
                     padding: EdgeInsets.only(top: 8 * scaleFactor),
-                    child: Text('cm', style: TextStyle(fontSize:scaleFactor * 18, color: Color(0xFF555768), fontWeight: FontWeight.w300 ),),
+                    child: Text('cm', style: TextStyle(fontSize:scaleFactor * 18, color: const Color(0xFF555768), fontWeight: FontWeight.w300 ),),
                   ),
                 ],
               ),

@@ -1,3 +1,4 @@
+import 'package:aprendiendo/vistas/paginas/app10/pages/home_page.dart';
 import 'package:aprendiendo/vistas/paginas/app8/app8.dart';
 import 'package:aprendiendo/vistas/paginas/app9/shared.dart';
 import 'package:aprendiendo/vistas/paginas/componentes/componentes.dart';
@@ -35,6 +36,7 @@ class VistaHome extends StatelessWidget {
     'IMC App',
     'App_8',
     'App_9',
+    'App_10',
   ];
 
   // Lista de colores
@@ -51,38 +53,41 @@ class VistaHome extends StatelessWidget {
     Color(0xFF356952),
     Color(0xFF3F4585),
     Color(0xFF3F4585),
+    Color(0xFF322222),
   ];
 
   // Lista de iconos
   final List<Icon> iconos = const [
-    Icon(Icons.assignment, color: Colors.white, size: 50),
-    Icon(Icons.assignment, color: Colors.white, size: 50),
-    Icon(Icons.plus_one, color: Colors.white, size: 50),
-    Icon(Icons.superscript, color: Colors.white, size: 50),
-    Icon(Icons.square, color: Colors.white, size: 50),
-    Icon(Icons.play_circle_fill, color: Colors.white, size: 50),
-    Icon(Icons.emoji_events, color: Colors.white, size: 50),
-    Icon(Icons.app_registration_rounded, color: Colors.white, size: 50),
-    Icon(Icons.list, color: Colors.white, size: 50),
-    Icon(Icons.sports_gymnastics , color: Colors.white, size: 50),
-    Icon(Icons.verified_user , color: Colors.white, size: 50),
-    Icon(Icons.share_rounded , color: Colors.white, size: 50),
+    Icon(Icons.assignment, color: Colors.white, size: 30),
+    Icon(Icons.assignment, color: Colors.white, size: 30),
+    Icon(Icons.plus_one, color: Colors.white, size: 30),
+    Icon(Icons.superscript, color: Colors.white, size: 30),
+    Icon(Icons.square, color: Colors.white, size: 30),
+    Icon(Icons.play_circle_fill, color: Colors.white, size: 30),
+    Icon(Icons.emoji_events, color: Colors.white, size: 30),
+    Icon(Icons.app_registration_rounded, color: Colors.white, size: 30),
+    Icon(Icons.list, color: Colors.white, size: 30),
+    Icon(Icons.sports_gymnastics , color: Colors.white, size: 30),
+    Icon(Icons.verified_user , color: Colors.white, size: 30),
+    Icon(Icons.share_rounded , color: Colors.white, size: 30),
+    Icon(Icons.share_rounded , color: Colors.white, size: 30),
   ];
 
   // Lista de rutas
   final List<Widget> rutas = [
-    Estructura(),
-    Practica(),
-    CounterScreen(),
-    Xilofono(),
-    Dados(),
-    Preguntas(),
-    TareasDart(),
-    Design1(),
-    Componentes(),
-    Imc(),
+    const Estructura(),
+    const Practica(),
+    const CounterScreen(),
+    const Xilofono(),
+    const Dados(),
+    const Preguntas(),
+    const TareasDart(),
+    const Design1(),
+    const Componentes(),
+    const Imc(),
     App8(),
-    Shared(),
+    const Shared(),
+    const HomePage(),
   ];
 
   @override

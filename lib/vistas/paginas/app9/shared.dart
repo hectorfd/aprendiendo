@@ -16,20 +16,20 @@ class _SharedState extends State<Shared> {
   int gender = 1;
 
   saveSharedPreferences() async {
-    SharedPreferences _preferences = await SharedPreferences.getInstance();
-    _preferences.setString("fullName", _fullNameController.text);
-    _preferences.setString("address", _addressController.text);
-    _preferences.setBool("darkMode", isDarkMode);
-    _preferences.setInt("gender", gender);
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    preferences.setString("fullName", _fullNameController.text);
+    preferences.setString("address", _addressController.text);
+    preferences.setBool("darkMode", isDarkMode);
+    preferences.setInt("gender", gender);
     print("Guardando en shared preferences!!!");
   }
 
   getSharedPreferences() async {
-    SharedPreferences _preferences = await SharedPreferences.getInstance();
-    String name = _preferences.getString("fullName") ?? "-";
-    String address = _preferences.getString("address") ?? "-";
-    bool darkMode = _preferences.getBool("darkMode") ?? false;
-    int genero = _preferences.getInt("gender") ?? 0;
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    String name = preferences.getString("fullName") ?? "-";
+    String address = preferences.getString("address") ?? "-";
+    bool darkMode = preferences.getBool("darkMode") ?? false;
+    int genero = preferences.getInt("gender") ?? 0;
 
     print(name);
     print(address);
@@ -46,17 +46,17 @@ class _SharedState extends State<Shared> {
 
    return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Shared Preferences App",
         ),
       ),
-      drawer: MyDrawerWidget(),
+      drawer: const MyDrawerWidget(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               "Configuración General",
               style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
             ),
@@ -65,7 +65,7 @@ class _SharedState extends State<Shared> {
             ),
             TextField(
               controller: _fullNameController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Nombre completo",
               ),
             ),
@@ -74,7 +74,7 @@ class _SharedState extends State<Shared> {
             ),
             TextField(
               controller: _addressController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Dirección actual",
               ),
             ),
@@ -88,12 +88,12 @@ class _SharedState extends State<Shared> {
                 isDarkMode = value;
                 setState(() {});
               },
-              title: Text("Dark mode"),
+              title: const Text("Dark mode"),
             ),
             const SizedBox(
               height: 12.0,
             ),
-            Text(
+            const Text(
               "Gender",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
@@ -105,7 +105,7 @@ class _SharedState extends State<Shared> {
                 gender = value!;
                 setState(() {});
               },
-              title: Text("Male"),
+              title: const Text("Male"),
             ),
             RadioListTile(
               value: 2,
@@ -114,7 +114,7 @@ class _SharedState extends State<Shared> {
                 gender = value!;
                 setState(() {});
               },
-              title: Text("Female"),
+              title: const Text("Female"),
             ),
             const SizedBox(
               height: 12.0,
@@ -123,17 +123,17 @@ class _SharedState extends State<Shared> {
               onPressed: () {
                 saveSharedPreferences();
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.save,
                 color: Colors.white,
               ),
-              label: Text(
+              label: const Text(
                 "Save Data",
                 style: TextStyle(color: Colors.white),
               ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.black,
-                minimumSize: Size(double.infinity, 50),
+                minimumSize: const Size(double.infinity, 50),
               ),
             ),
           ],

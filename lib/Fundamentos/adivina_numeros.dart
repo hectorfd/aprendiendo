@@ -3,13 +3,13 @@ import 'dart:io';
 
 void main(List<String>args){
   print('Introduce un numero maximo');
-  var valor_max = stdin.readLineSync();
-  var valor_max_int;
-  if(valor_max == null){
+  var valorMax = stdin.readLineSync();
+  var valorMaxInt;
+  if(valorMax == null){
     print('error, intentelo de nuevo');
     exit(0);
   }
-  if(int.tryParse(valor_max)!=null){
+  if(int.tryParse(valorMax)!=null){
     print('introduce un numero mayor que 0 la proxima vez');
     exit(0);
   }else{
@@ -18,11 +18,11 @@ void main(List<String>args){
   }
 
   Random random = Random();
-  var numero_aleatorio = random.nextInt(valor_max_int);
-  var numero_intentos;
+  var numeroAleatorio = random.nextInt(valorMaxInt);
+  var numeroIntentos;
   while(true){
-    numero_intentos++;
-    var numero_introducido = stdin.readLineSync();
+    numeroIntentos++;
+    var numeroIntroducido = stdin.readLineSync();
   }
 
 }

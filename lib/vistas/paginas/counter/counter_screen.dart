@@ -31,7 +31,7 @@ class _CounterScreenState extends State<CounterScreen> {
                 ),
               ),
              Text(
-              '$texto',
+              texto,
               style:const TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
@@ -51,7 +51,7 @@ class _CounterScreenState extends State<CounterScreen> {
 
 
         },
-      child: Icon(Icons.plus_one),
+      child: const Icon(Icons.plus_one),
       ),
     );
   }

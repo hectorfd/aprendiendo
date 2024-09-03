@@ -52,11 +52,11 @@ class _PreguntasState extends State<Preguntas> {
         preguntaRespondida = true;
         if (respuestaUsuario == respuestas[actualPreguntaIndex]) {
           resultadoMensaje = '¡Firme!';
-          score.add(Icon(Icons.check_circle_outline, color: Colors.green));
+          score.add(const Icon(Icons.check_circle_outline, color: Colors.green));
           aciertos++;
         } else {
           resultadoMensaje = '¡Incorrecto!';
-          score.add(Icon(Icons.close, color: Colors.red));
+          score.add(const Icon(Icons.close, color: Colors.red));
           desaciertos++;
         }
         if (preguntasRespondidas.length == preguntas.length-1) {

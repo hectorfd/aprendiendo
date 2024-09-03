@@ -659,7 +659,7 @@ showMyAlert5(BuildContext context) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
-      int? _selectedValue;
+      int? selectedValue;
       final Size screenSize = MediaQuery.of(context).size;
       final double scaleFactor = screenSize.width > 600 ? 1.5 : 1.0;
       double iconSize = screenSize.width > 600 ? 32.0 : 24.0;
@@ -795,10 +795,10 @@ showMyAlert5(BuildContext context) {
                               scale: 1.2 * scaleFactor, 
                               child: Radio<int>(
                                 value: 1,
-                                groupValue: _selectedValue,
+                                groupValue: selectedValue,
                                 onChanged: (int? value) {
                                   setState(() {
-                                    _selectedValue = value;
+                                    selectedValue = value;
                                   });
                                 },
                                 activeColor: Colors.deepPurple,
@@ -878,10 +878,10 @@ showMyAlert5(BuildContext context) {
                               scale: 1.2 * scaleFactor, 
                               child: Radio<int>(
                                 value: 1,
-                                groupValue: _selectedValue,
+                                groupValue: selectedValue,
                                 onChanged: (int? value) {
                                   setState(() {
-                                    _selectedValue = value;
+                                    selectedValue = value;
                                   });
                                 },
                                 activeColor: Colors.deepPurple,
@@ -961,10 +961,10 @@ showMyAlert5(BuildContext context) {
                               scale: 1.2 * scaleFactor, 
                               child: Radio<int>(
                                 value: 1,
-                                groupValue: _selectedValue,
+                                groupValue: selectedValue,
                                 onChanged: (int? value) {
                                   setState(() {
-                                    _selectedValue = value;
+                                    selectedValue = value;
                                   });
                                 },
                                 activeColor: Colors.deepPurple,

@@ -1,29 +1,29 @@
 import 'dart:io';
 import 'dart:math';
 void main(List<String>args){
-  var user_wins = 0;
-  var computer_wins = 0;
+  var userWins = 0;
+  var computerWins = 0;
   var opciones =['piedra','papel','tijera'];
   while(true){
     print('elige piedra, papel, tijera ointroduce q para salir');
-    var eleccion_usuario = stdin.readLineSync()!.toLowerCase();
-    if(eleccion_usuario.toString()=='q'){
+    var eleccionUsuario = stdin.readLineSync()!.toLowerCase();
+    if(eleccionUsuario.toString()=='q'){
       break;
     }
-    if(!opciones.contains(eleccion_usuario)){
+    if(!opciones.contains(eleccionUsuario)){
       print('Error, elige piedra, papel o tijera');
       continue;
     }
     Random random = Random();
-    var random_num = random.nextInt(2);
-    var eleccion_ordenador = opciones[random_num];
-    print('el ordenador ha elegido:$eleccion_ordenador');
-    if(eleccion_usuario == 'piedra' && eleccion_ordenador == 'tijeras'){
+    var randomNum = random.nextInt(2);
+    var eleccionOrdenador = opciones[randomNum];
+    print('el ordenador ha elegido:$eleccionOrdenador');
+    if(eleccionUsuario == 'piedra' && eleccionOrdenador == 'tijeras'){
       print('Has ganado');
-      user_wins++;
-    }else if(eleccion_usuario == 'papel'&& eleccion_ordenador == 'piedra'){
+      userWins++;
+    }else if(eleccionUsuario == 'papel'&& eleccionOrdenador == 'piedra'){
       print('eres ganado');
-      user_wins++;
+      userWins++;
     }
   }
 }

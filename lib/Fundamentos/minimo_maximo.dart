@@ -10,7 +10,7 @@ void main(List<String>args){
   }
   print('el maximo es $maximo');
 // calcular el minimo
-var minimo;
+int minimo;
 for(var numero2 in lista){
   if(minimo == null || minimo > numero2){
     minimo = numero2;

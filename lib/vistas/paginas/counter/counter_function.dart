@@ -49,7 +49,7 @@ class _CounterFunctionState extends State<CounterFunction> {
                 ),
               ),
              Text(
-              '$texto',
+              texto,
               style:const TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,

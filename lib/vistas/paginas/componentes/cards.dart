@@ -78,7 +78,7 @@ class Cards extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  Container(
+                  SizedBox(
                     width: 120 * scaleFactor,
                     //height: 100 * scaleFactor,
                     

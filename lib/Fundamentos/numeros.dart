@@ -2,7 +2,7 @@ void main(List<String> args) {
   //Enteros
   int uno = 1;
   int dos;
-  final tres = 3;
+  const tres = 3;
   var cuatro = 4;
   dynamic cinco = 5;
   print('$uno, ${dos = 2} $tres, $cuatro, $cinco');
@@ -19,7 +19,7 @@ void main(List<String> args) {
   mayor = 3 >= 5;
   print('$mayor');
 
-  final igual = 'hola'=='hola';
+  const igual = 'hola'=='hola';
   print('hola = hola -> $igual');
 
   //concatenación
