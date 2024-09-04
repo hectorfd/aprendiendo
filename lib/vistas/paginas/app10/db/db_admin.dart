@@ -24,7 +24,7 @@ class DbAdmin {
   Future<Database> initDatabase() async {
     Directory directory = await getApplicationDocumentsDirectory();
     String path = join(directory.path, "TaskDB.db");
-    print("creando base de datos !!!!");
+    
     return await openDatabase(
       path,
       version: 1,
@@ -61,5 +61,47 @@ class DbAdmin {
     List tasks = await db!.rawQuery("SELECT * FROM TASK");
     print(tasks);
   }
+
+  Future<List<Map<String, dynamic>>>getTask()async{
+    Database? db = await checkDatabase();
+    List<Map<String, dynamic>> tasks = await db!.query("TASK");
+    return tasks;
+  }
+
+  updateRawTask() async {
+    Database? db = await checkDatabase();
+    int res = await db!.rawUpdate(
+      "UPDATE TASK SET title = ?, description = ?, status = ? WHERE id = ?",
+      ['Ir de pachanga', 'pa pachanguear', 'realizado', 2],
+    );
+
+    print(res);
+  }
+
+  updateTask() async {
+    Database? db = await checkDatabase();
+    int res = await db!.update( "TASK", {
+      "title":"Ir al gyn",
+      "description" : "Comprar ver mujeres",
+      "status" : "no realizado",
+    },
+    where: "id = 3"
+      
+    );
+
+    print(res);
+  }
+  deleteRawTask()async {
+    Database? db = await checkDatabase();
+    int res = await db!.rawDelete("DELETE FROM TASK WHERE id = ?", [3]);
+    print(res);
+  }
+
+  deleteTask()async {
+    Database? db = await checkDatabase();
+    int res = await db!.delete("TASK",where: "id = 5");
+    print(res);
+  }
+
 
 }
