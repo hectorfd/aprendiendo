@@ -1,8 +1,23 @@
 import 'package:aprendiendo/vistas/paginas/app10/db/db_admin.dart';
+import 'package:aprendiendo/vistas/paginas/app10/models/task_model.dart';
+import 'package:aprendiendo/vistas/paginas/app10/widget/my_form_widget.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  //bool isFinished = false;
+
+  showDialoForm(){
+    showDialog(context: context, builder: (BuildContext context){
+      return MyformWidget();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -10,18 +25,27 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Home Page"),
       ),
+
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        showDialoForm();
+      }, 
+      child: Icon(Icons.add),
+
+      ),
+
+
       body: FutureBuilder(
         future: DbAdmin.db.getTask(),
         builder: (BuildContext context, AsyncSnapshot snap) {
           if (snap.hasData) {
-            List<Map<String, dynamic>> myTask = snap.data;
+            List<TaskModel> myTask = snap.data;
             return ListView.builder(
               itemCount: myTask.length,
               itemBuilder: (BuildContext context, int index) {
-                String title = myTask[index]['title'];
-                String description = myTask[index]['description'];
-                int id = myTask[index]['id'];
-                String status = myTask[index]['status']; 
+                String title = myTask[index].title;
+                String description = myTask[index].description;
+                int id = myTask[index].id;
+                String status = myTask[index].status; 
 
                 return ListTile(
                   title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold),),
@@ -43,7 +67,6 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  
   void _showTaskDetailsDialog(BuildContext context, int id, String title, String description, String status) {
     showDialog(
       context: context,

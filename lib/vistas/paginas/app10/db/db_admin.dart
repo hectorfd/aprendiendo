@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:aprendiendo/vistas/paginas/app10/models/task_model.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
@@ -62,10 +63,19 @@ class DbAdmin {
     print(tasks);
   }
 
-  Future<List<Map<String, dynamic>>>getTask()async{
+  // Future<List<Map<String, dynamic>>>getTask()async{
+  //   Database? db = await checkDatabase();
+  //   List<Map<String, dynamic>> tasks = await db!.query("TASK");
+  //   return tasks;
+  // }
+  Future<List<TaskModel>>getTask()async{
     Database? db = await checkDatabase();
     List<Map<String, dynamic>> tasks = await db!.query("TASK");
-    return tasks;
+    List<TaskModel> TaskModelList =
+       tasks.map((e)=>TaskModel.deMapAModel(e)).toList();
+    return TaskModelList;
+
+
   }
 
   updateRawTask() async {
