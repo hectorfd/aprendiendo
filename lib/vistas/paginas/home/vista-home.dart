@@ -11,6 +11,7 @@ import 'package:aprendiendo/vistas/paginas/estructura2/maqueta2.dart';
 import 'package:aprendiendo/vistas/paginas/home/home.dart';
 import 'package:aprendiendo/vistas/paginas/imc/imc.dart';
 import 'package:aprendiendo/vistas/paginas/maqueta/home_screen.dart';
+import 'package:aprendiendo/vistas/paginas/pokedex/pages/home_page.dart';
 import 'package:aprendiendo/vistas/paginas/practica/practica.dart';
 import 'package:aprendiendo/vistas/paginas/preguntas/preguntas.dart';
 import 'package:aprendiendo/vistas/paginas/tareas/tareas_dart.dart';
@@ -37,6 +38,7 @@ class VistaHome extends StatelessWidget {
     'App_8',
     'App_9',
     'App_10',
+    'Pokedex'
   ];
 
   // Lista de colores
@@ -54,6 +56,7 @@ class VistaHome extends StatelessWidget {
     Color(0xFF3F4585),
     Color(0xFF3F4585),
     Color(0xFF322222),
+    Color(0xFF73CA00),
   ];
 
   // Lista de iconos
@@ -70,7 +73,8 @@ class VistaHome extends StatelessWidget {
     Icon(Icons.sports_gymnastics , color: Colors.white, size: 30),
     Icon(Icons.verified_user , color: Colors.white, size: 30),
     Icon(Icons.share_rounded , color: Colors.white, size: 30),
-    Icon(Icons.share_rounded , color: Colors.white, size: 30),
+    Icon(Icons.today , color: Colors.white, size: 30),
+    Icon(Icons.play_circle , color: Colors.white, size: 30),
   ];
 
   // Lista de rutas
@@ -88,6 +92,7 @@ class VistaHome extends StatelessWidget {
     App8(),
     const Shared(),
     const HomePage(),
+    HomePage2(),
   ];
 
   @override
