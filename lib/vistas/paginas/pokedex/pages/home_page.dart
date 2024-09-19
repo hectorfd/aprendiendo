@@ -39,7 +39,7 @@ class _HomePage2State extends State<HomePage2> {
   }
 
 
-  @override
+   @override
   Widget build(BuildContext context) {
     //getDataPokemon();
 
@@ -65,21 +65,18 @@ class _HomePage2State extends State<HomePage2> {
                   physics: ScrollPhysics(),
                   shrinkWrap: true,
                   crossAxisCount: 2,
-                  mainAxisSpacing: 12,
-                  crossAxisSpacing: 12,
-                  childAspectRatio: 1.3,
-                  children: pokemonModel.map((e) => InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => DetailPage(pokemon: e),
-                          ),
-                        );
-                      },
-                      child: ItemPokemonWidget(pokemon: e),  // Actualizado para pasar el modelo completo
-                    ),
-                  ).toList(),
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  childAspectRatio: 1.2,
+                  children: pokemonModel
+                      .map(
+                        (e) => ItemPokemonWidget(
+                          name: e.name,
+                          img: e.img,
+                          type: e.type,
+                        ),
+                      )
+                      .toList(),
                 ),
               ],
             ),
