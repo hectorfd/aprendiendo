@@ -2,23 +2,18 @@ import 'package:aprendiendo/vistas/paginas/app10/pages/home_page.dart';
 import 'package:aprendiendo/vistas/paginas/app8/app8.dart';
 import 'package:aprendiendo/vistas/paginas/app9/shared.dart';
 import 'package:aprendiendo/vistas/paginas/componentes/componentes.dart';
-import 'package:aprendiendo/vistas/paginas/counter/counter_function.dart';
 import 'package:aprendiendo/vistas/paginas/counter/counter_screen.dart';
 import 'package:aprendiendo/vistas/paginas/dados/dados.dart';
 import 'package:aprendiendo/vistas/paginas/disenios/desing1.dart';
 import 'package:aprendiendo/vistas/paginas/estructura/estructura.dart';
-import 'package:aprendiendo/vistas/paginas/estructura2/maqueta2.dart';
 import 'package:aprendiendo/vistas/paginas/home/home.dart';
 import 'package:aprendiendo/vistas/paginas/imc/imc.dart';
-import 'package:aprendiendo/vistas/paginas/maqueta/home_screen.dart';
 import 'package:aprendiendo/vistas/paginas/pokedex/pages/home_page.dart';
 import 'package:aprendiendo/vistas/paginas/practica/practica.dart';
 import 'package:aprendiendo/vistas/paginas/preguntas/preguntas.dart';
 import 'package:aprendiendo/vistas/paginas/tareas/tareas_dart.dart';
 import 'package:aprendiendo/vistas/paginas/xilofono/xilofono.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class VistaHome extends StatelessWidget {
   VistaHome({super.key});

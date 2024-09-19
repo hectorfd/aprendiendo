@@ -15,19 +15,19 @@ class _MyformWidgetState extends State<MyformWidget> {
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text("Agregar Tarea"),
-            TextField(
+            const Text("Agregar Tarea"),
+            const TextField(
               decoration: InputDecoration(hintText: "Ingrese la tarea"),
               ),
-              SizedBox(height: 6,),
-              TextField(
+              const SizedBox(height: 6,),
+              const TextField(
                 maxLines: 2,
               decoration: InputDecoration(hintText: "Descripción"),
               ),
-              SizedBox(height: 6,),
+              const SizedBox(height: 6,),
               Row(
                 children: [
-                  Text("Estado"),
+                  const Text("Estado"),
                   Checkbox(value: isFinished, onChanged: (value){
                     isFinished = value!;
                     setState(() {
@@ -35,7 +35,7 @@ class _MyformWidgetState extends State<MyformWidget> {
                   }),
                 ],
               ),
-              SizedBox(height: 6,),
+              const SizedBox(height: 6,),
               Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -49,12 +49,12 @@ class _MyformWidgetState extends State<MyformWidget> {
                       onPressed: (){
                         Navigator.of(context).pop();
                       },
-                      label: Text("Cancelar",style: TextStyle(color: Colors.white),),
+                      label: const Text("Cancelar",style: TextStyle(color: Colors.white),),
                       
                     ),
                     ElevatedButton(
                       onPressed: () {},
-                      child: Text("Aceptar",style: TextStyle(color: Colors.black45),),
+                      child: const Text("Aceptar",style: TextStyle(color: Colors.black45),),
                     ),
                   ],
               ),

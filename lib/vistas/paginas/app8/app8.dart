@@ -1,6 +1,5 @@
 import 'package:aprendiendo/vistas/paginas/app8/widgets/item_list_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class App8 extends StatelessWidget{
   App8({super.key});

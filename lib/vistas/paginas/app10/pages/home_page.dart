@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
 
   showDialoForm(){
     showDialog(context: context, builder: (BuildContext context){
-      return MyformWidget();
+      return const MyformWidget();
     });
   }
 
@@ -23,13 +23,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home Page"),
+        title: const Text("Home Page"),
       ),
 
       floatingActionButton: FloatingActionButton(onPressed: (){
         showDialoForm();
       }, 
-      child: Icon(Icons.add),
+      child: const Icon(Icons.add),
 
       ),
 
@@ -107,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
                       ),
                       TextSpan(
-                        text: "$title",
+                        text: title,
                         style:const TextStyle(fontWeight: FontWeight.normal, color: Colors.black),
                       ),
                     ],
@@ -122,7 +122,7 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
                       ),
                       TextSpan(
-                        text: "$description",
+                        text: description,
                         style: const TextStyle(fontWeight: FontWeight.normal, color: Colors.black),
                       ),
                     ],
@@ -137,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
                       ),
                       TextSpan(
-                        text: "$status",
+                        text: status,
                         style:const TextStyle(fontWeight: FontWeight.normal, color: Colors.black),
                       ),
                     ],

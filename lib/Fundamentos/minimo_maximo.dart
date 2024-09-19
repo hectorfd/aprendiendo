@@ -12,7 +12,7 @@ void main(List<String>args){
 // calcular el minimo
 int minimo;
 for(var numero2 in lista){
-  if(minimo == null || minimo > numero2){
+  if(minimo > numero2){
     minimo = numero2;
   }
   print('ciclo $minimo $numero2');

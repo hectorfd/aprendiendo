@@ -1,6 +1,5 @@
 import 'package:aprendiendo/vistas/paginas/maqueta/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class WelcomeScreen extends StatelessWidget{
   const WelcomeScreen({super.key});

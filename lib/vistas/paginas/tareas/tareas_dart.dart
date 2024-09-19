@@ -1,5 +1,3 @@
-import 'package:aprendiendo/vistas/paginas/home/home.dart';
-import 'package:aprendiendo/vistas/paginas/home/vista-home.dart';
 import 'package:aprendiendo/vistas/paginas/tareas/homeWork1.dart';
 import 'package:aprendiendo/vistas/paginas/tareas/homeWork2.dart';
 import 'package:aprendiendo/vistas/paginas/tareas/inputs.dart';

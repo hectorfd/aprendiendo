@@ -49,7 +49,7 @@ class _Design9State extends State<Design9> {
         ),
         child: Text(
           buttonText,
-          style: TextStyle(fontSize: 20.0),
+          style: const TextStyle(fontSize: 20.0),
         ),
       ),
     );
