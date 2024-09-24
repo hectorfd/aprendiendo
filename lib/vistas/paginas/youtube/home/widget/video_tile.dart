@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class VideoTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -8,7 +7,7 @@ class VideoTile extends StatelessWidget {
         Stack(
           children: [
             Image.network(
-              'https://via.placeholder.com/400', // Placeholder del video
+              'https://images.pexels.com/photos/20775632/pexels-photo-20775632/free-photo-of-mar-amanecer-paisaje-naturaleza.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
               width: double.infinity,
               height: 200,
               fit: BoxFit.cover,
@@ -28,8 +27,8 @@ class VideoTile extends StatelessWidget {
           leading: CircleAvatar(
             backgroundImage: NetworkImage('https://via.placeholder.com/50'),
           ),
-          title: Text('Lorem reprehenderit et adipisicing sunt.'),
-          subtitle: Text('alanxelmundo • 8.8M de vistas • hace 5 años'),
+          title: Text('titulo del video'),
+          subtitle: Text('autoro creador • 8.8M de vistas que va ser • hace 1 año'),
           trailing: Icon(Icons.more_vert),
         ),
       ],

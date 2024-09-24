@@ -31,7 +31,7 @@ class YouTubeBody extends StatelessWidget {
         CategoryRow(),
         Expanded(
           child: ListView.builder(
-            itemCount: 10, // Número de videos a mostrar
+            itemCount: 5, // se hace muy lento
             itemBuilder: (context, index) {
               return VideoTile();
             },
