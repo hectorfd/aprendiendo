@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:path/path.dart';
 
 class CategoryRow extends StatelessWidget {
   @override
@@ -8,7 +9,7 @@ class CategoryRow extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
-          CategoryButton(text: 'Explorar'),
+          CategoryButton(text: 'Explorar',),
           DividerLine(),
           CategoryButton(text: 'Todos'),
           CategoryButton(text: 'Mixes'),
@@ -22,8 +23,11 @@ class CategoryRow extends StatelessWidget {
 
 class CategoryButton extends StatelessWidget {
   final String text;
-
-  CategoryButton({required this.text});
+  final Color textColor;
+  CategoryButton({
+    required this.text,
+    this.textColor = Colors.white, 
+  });
 
   @override
   Widget build(BuildContext context) {
