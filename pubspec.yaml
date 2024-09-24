@@ -108,6 +108,7 @@ flutter:
   - assets/images/image4.png
   - assets/images/pokeball.png
   - assets/images/bulva.png
+  - assets/images/Youtube_logo.png
   fonts:
     - family: Poppins
       fonts:

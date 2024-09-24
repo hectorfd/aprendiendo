@@ -13,6 +13,7 @@ import 'package:aprendiendo/vistas/paginas/practica/practica.dart';
 import 'package:aprendiendo/vistas/paginas/preguntas/preguntas.dart';
 import 'package:aprendiendo/vistas/paginas/tareas/tareas_dart.dart';
 import 'package:aprendiendo/vistas/paginas/xilofono/xilofono.dart';
+import 'package:aprendiendo/vistas/paginas/youtube/home/home3.dart';
 import 'package:flutter/material.dart';
 
 class VistaHome extends StatelessWidget {
@@ -33,7 +34,8 @@ class VistaHome extends StatelessWidget {
     'App_8',
     'App_9',
     'App_10',
-    'Pokedex'
+    'Pokedex',
+    'Youtube'
   ];
 
   // Lista de colores
@@ -52,6 +54,7 @@ class VistaHome extends StatelessWidget {
     Color(0xFF3F4585),
     Color(0xFF322222),
     Color(0xFF73CA00),
+    Color(0xFFCF1400),
   ];
 
   // Lista de iconos
@@ -69,7 +72,8 @@ class VistaHome extends StatelessWidget {
     Icon(Icons.verified_user , color: Colors.white, size: 30),
     Icon(Icons.share_rounded , color: Colors.white, size: 30),
     Icon(Icons.today , color: Colors.white, size: 30),
-    Icon(Icons.play_circle , color: Colors.white, size: 30),
+    Icon(Icons.abc , color: Colors.white, size: 30),
+    Icon(Icons.play_arrow , color: Colors.white, size: 30),
   ];
 
   // Lista de rutas
@@ -88,6 +92,7 @@ class VistaHome extends StatelessWidget {
     const Shared(),
     const HomePage(),
     HomePage2(),
+    Home3(),
   ];
 
   @override

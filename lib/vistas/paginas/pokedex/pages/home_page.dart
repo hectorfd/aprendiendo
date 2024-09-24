@@ -24,22 +24,26 @@ class _HomePage2State extends State<HomePage2> {
     getDataPokemon();
   }
 
-  void getDataPokemon({int limit = 20}) async {  // Puedes ajustar el límite según necesites
+  getDataPokemon() async {
     Uri _uri = Uri.parse(
         "https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json");
     http.Response response = await http.get(_uri);
     if (response.statusCode == 200) {
       Map<String, dynamic> myMap = json.decode(response.body);
-      List<dynamic> allPokemons = myMap["pokemon"];
-      pokemonModel = allPokemons.take(limit)
+      //pokemons = myMap["pokemon"];
+      pokemonModel = myMap["pokemon"]
           .map<PokemonModel>((e) => PokemonModel.fromJson(e))
           .toList();
+      //print(pokemonModel);
       setState(() {});
+      //print(pokemons[0]["img"]);
+      //pokemons.forEach((e) {
+      //  print(e["name"]);
+      //});
     }
   }
 
-
-   @override
+  @override
   Widget build(BuildContext context) {
     //getDataPokemon();
 
@@ -65,15 +69,16 @@ class _HomePage2State extends State<HomePage2> {
                   physics: ScrollPhysics(),
                   shrinkWrap: true,
                   crossAxisCount: 2,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
-                  childAspectRatio: 1.2,
+                  mainAxisSpacing: 12,
+                  crossAxisSpacing: 12,
+                  childAspectRatio: 1.3,
                   children: pokemonModel
                       .map(
                         (e) => ItemPokemonWidget(
-                          name: e.name,
-                          img: e.img,
-                          type: e.type,
+                          // name: e.name,
+                          // img: e.img,
+                          // type: e.type,
+                          pokemon: e,
                         ),
                       )
                       .toList(),
