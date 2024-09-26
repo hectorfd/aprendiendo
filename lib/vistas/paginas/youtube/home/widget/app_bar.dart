@@ -26,7 +26,7 @@ class YouTubeAppBar extends StatelessWidget implements PreferredSizeWidget {
               Icon(Icons.search),
               SizedBox(width: 12),
               CircleAvatar(
-                backgroundImage: NetworkImage('https://randomuser.me/api/portraits/men/32.jpg'),
+                backgroundImage: NetworkImage('https://images.pexels.com/photos/4310726/pexels-photo-4310726.jpeg'),
               ),
             ],
           ),
