@@ -15,12 +15,11 @@ class APIService {
       Map<String, dynamic> myMap = json.decode(response.body);
       List videos = myMap["items"];
 
-      // Recorremos cada video para obtener el channelId
       for (var video in videos) {
         String channelId = video['snippet']['channelId'];
-        String avatarUrl = await fetchChannelAvatar(channelId); // Obtener avatar
+        String avatarUrl = await fetchChannelAvatar(channelId); 
 
-        // Crear el modelo de video y agregarlo a la lista
+
         VideoModel videoModel = VideoModel.fromJson(video, avatarUrl);
         videosModel.add(videoModel);
       }

@@ -4,6 +4,7 @@ import 'package:aprendiendo/vistas/paginas/youtubeprof/services/api_service.dart
 import 'package:aprendiendo/vistas/paginas/youtubeprof/ui/general/colors.dart';
 import 'package:aprendiendo/vistas/paginas/youtubeprof/ui/widgets/item_filter_widget.dart';
 import 'package:aprendiendo/vistas/paginas/youtubeprof/ui/widgets/item_video_widget.dart';
+import 'package:aprendiendo/vistas/paginas/youtubeprof/pages/video_detail_page.dart'; 
 
 class HomePageprof extends StatefulWidget {
   const HomePageprof({super.key});
@@ -29,9 +30,18 @@ class _HomePageprofState extends State<HomePageprof> {
     });
   }
 
+
+  void navigateToVideoDetail(VideoModel videoModel) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => VideoDetailPage(videoModel: videoModel), 
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    _apiService.getVideos();
     return SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.symmetric(
@@ -92,14 +102,16 @@ class _HomePageprofState extends State<HomePageprof> {
               ),
             ),
             ListView.builder(
-                shrinkWrap: true,
-                physics: ScrollPhysics(),
-                itemCount: videos.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return ItemVideoWidget(
-                    videoModel: videos[index],
-                  );
-                }),
+              shrinkWrap: true,
+              physics: ScrollPhysics(),
+              itemCount: videos.length,
+              itemBuilder: (BuildContext context, int index) {
+                return ItemVideoWidget(
+                  videoModel: videos[index],
+                  onTap: () => navigateToVideoDetail(videos[index]), 
+                );
+              },
+            ),
           ],
         ),
       ),

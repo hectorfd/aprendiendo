@@ -168,7 +168,7 @@ Future<VideoModel> fetchVideoDetails(String videoId) async {
   if (response.statusCode == 200) {
     final jsonData = json.decode(response.body);
     String channelId = jsonData['items'][0]['snippet']['channelId'];
-    String avatarUrl = await fetchChannelAvatar(channelId); // Obtener el avatar del canal
+    String avatarUrl = await fetchChannelAvatar(channelId); 
 
     return VideoModel(
       kind: jsonData['items'][0]['kind'],
@@ -177,7 +177,7 @@ Future<VideoModel> fetchVideoDetails(String videoId) async {
       snippet: Snippet.fromJson(jsonData['items'][0]['snippet']),
       duration: jsonData['items'][0]['contentDetails']['duration'] ?? '00:00',
       viewCount: jsonData['items'][0]['statistics']['viewCount']?.toString() ?? '0',
-      channelAvatarUrl: avatarUrl, // Establece el avatar obtenido
+      channelAvatarUrl: avatarUrl, 
     );
   } else {
     throw Exception('Error al cargar los detalles del video');
