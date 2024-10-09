@@ -25,6 +25,7 @@ class _InitPageState extends State<InitPage> {
     return Scaffold(
       backgroundColor: kBrandPrimaryColor,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: kBrandPrimaryColor,
         title: Image.asset(
           "assets/images/Youtube_logo.png",
@@ -53,20 +54,22 @@ class _InitPageState extends State<InitPage> {
               Positioned(
                 right: 0,
                 child: Container(
-                  padding: const EdgeInsets.all(4),
+                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  
                   decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.circular(15),
                   ),
                   constraints: const BoxConstraints(
-                    minWidth: 15,
-                    minHeight: 15,
+                    minWidth: 10,
+                    minHeight: 10,
                   ),
                   child: const Text(
                     '9+',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
+                      fontSize: 11,
                     ),
                   ),
                 ),

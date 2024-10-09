@@ -14,11 +14,58 @@ class APIService {
     if (response.statusCode == 200) {
       Map<String, dynamic> myMap = json.decode(response.body);
       List videos = myMap["items"];
-      videosModel = videos.map((e) => VideoModel.fromJson(e)).toList();
+
+      // Recorremos cada video para obtener el channelId
+      for (var video in videos) {
+        String channelId = video['snippet']['channelId'];
+        String avatarUrl = await fetchChannelAvatar(channelId); // Obtener avatar
+
+        // Crear el modelo de video y agregarlo a la lista
+        VideoModel videoModel = VideoModel.fromJson(video, avatarUrl);
+        videosModel.add(videoModel);
+      }
+
       print(videosModel);
       print(response.statusCode);
       return videosModel;
     }
     return videosModel;
+  }
+
+  Future<VideoModel> fetchVideoDetails(String videoId, String channelId) async {
+    final response = await http.get(
+      Uri.parse('https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=$videoId&key=AIzaSyAaOa7DgE461eKAN5okwXdL6L94ILWgSvg'),
+    );
+
+    if (response.statusCode == 200) {
+      final jsonData = json.decode(response.body);
+      String avatarUrl = await fetchChannelAvatar(channelId); 
+
+      return VideoModel(
+        kind: jsonData['items'][0]['kind'],
+        etag: jsonData['items'][0]['etag'],
+        id: Id.fromJson(jsonData['items'][0]['id']),
+        snippet: Snippet.fromJson(jsonData['items'][0]['snippet']),
+        duration: jsonData['items'][0]['contentDetails']['duration'] ?? '00:00',
+        viewCount: jsonData['items'][0]['statistics']['viewCount']?.toString() ?? '0',
+        channelAvatarUrl: avatarUrl, 
+      );
+    } else {
+      throw Exception('Error al cargar los detalles del video');
+    }
+  }
+
+  Future<String> fetchChannelAvatar(String channelId) async {
+    final response = await http.get(
+      Uri.parse('https://www.googleapis.com/youtube/v3/channels?part=snippet&id=$channelId&key=AIzaSyAaOa7DgE461eKAN5okwXdL6L94ILWgSvg'), // Reemplaza con tu API Key
+    );
+
+    if (response.statusCode == 200) {
+      final jsonData = json.decode(response.body);
+      if (jsonData['items'].isNotEmpty) {
+        return jsonData['items'][0]['snippet']['thumbnails']['default']['url'];
+      }
+    }
+    return 'https://example.com/default-avatar.png'; 
   }
 }
