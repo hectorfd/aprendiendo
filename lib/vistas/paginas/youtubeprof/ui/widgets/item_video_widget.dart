@@ -1,13 +1,18 @@
+import 'package:aprendiendo/vistas/paginas/youtubeprof/models/video_model.dart';
 import 'package:flutter/material.dart';
 
 class ItemVideoWidget extends StatelessWidget {
-  const ItemVideoWidget({super.key});
+  VideoModel videoModel;
+
+  ItemVideoWidget({super.key, 
+    required this.videoModel,
+  });
 
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     return Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         top: 6.0,
         bottom: 10.0,
       ),
@@ -16,7 +21,7 @@ class ItemVideoWidget extends StatelessWidget {
           Stack(
             children: [
               Image.network(
-                "https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                videoModel.snippet.thumbnails.high.url,
                 width: double.infinity,
                 height: height * 0.3,
                 fit: BoxFit.cover,
@@ -25,16 +30,16 @@ class ItemVideoWidget extends StatelessWidget {
                 bottom: 0,
                 right: 0,
                 child: Container(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 5.0,
                     vertical: 1.0,
                   ),
-                  margin: EdgeInsets.symmetric(
+                  margin: const EdgeInsets.symmetric(
                     horizontal: 10.0,
                     vertical: 10.0,
                   ),
                   color: Colors.black.withOpacity(0.7),
-                  child: Text(
+                  child: const Text(
                     "23:22",
                     style: TextStyle(
                       color: Colors.white,
@@ -46,13 +51,13 @@ class ItemVideoWidget extends StatelessWidget {
           ),
           ListTile(
             contentPadding: EdgeInsets.zero,
-            leading: CircleAvatar(
+            leading: const CircleAvatar(
               backgroundImage: NetworkImage(
                 "https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
               ),
               backgroundColor: Colors.white38,
             ),
-            title: Text(
+            title: const Text(
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               "Commodo sunt nisi .",
@@ -61,7 +66,7 @@ class ItemVideoWidget extends StatelessWidget {
                 fontSize: 14.0,
               ),
             ),
-            subtitle: Text(
+            subtitle: const Text(
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               "MenLeeMasNa - 8.8 M de vistas - hace 5 años",
@@ -73,8 +78,8 @@ class ItemVideoWidget extends StatelessWidget {
             trailing: Column(
               children: [
                 Container(
-                  margin: EdgeInsets.only(top: 10.0),
-                  child: Icon(
+                  margin: const EdgeInsets.only(top: 10.0),
+                  child: const Icon(
                     Icons.more_vert,
                     color: Colors.white,
                   ),

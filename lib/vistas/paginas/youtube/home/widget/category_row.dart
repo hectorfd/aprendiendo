@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:path/path.dart';
 
 class CategoryRow extends StatelessWidget {
+  const CategoryRow({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 50,
       child: ListView(
         scrollDirection: Axis.horizontal,
@@ -24,7 +26,7 @@ class CategoryRow extends StatelessWidget {
 class CategoryButton extends StatelessWidget {
   final String text;
   final Color textColor;
-  CategoryButton({
+  const CategoryButton({super.key, 
     required this.text,
     this.textColor = Colors.white, 
   });
@@ -42,6 +44,8 @@ class CategoryButton extends StatelessWidget {
 }
 
 class DividerLine extends StatelessWidget {
+  const DividerLine({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(

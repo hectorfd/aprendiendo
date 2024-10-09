@@ -25,6 +25,8 @@ class Home3 extends StatelessWidget {
 
 // Cuerpo de la página
 class YouTubeBody extends StatelessWidget {
+  const YouTubeBody({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(

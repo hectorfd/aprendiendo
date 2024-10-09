@@ -11,7 +11,7 @@ class ItemPokemonWidget extends StatelessWidget {
 
   PokemonModel pokemon;
 
-  ItemPokemonWidget({
+  ItemPokemonWidget({super.key, 
     // required this.name,
     // required this.img,
     // required this.type,
@@ -41,15 +41,17 @@ class ItemPokemonWidget extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
+              bottom: -20,
+              right: -20,
               child: Image.asset(
                 "assets/images/pokeball.png",
                 height: 120,
                 color: Colors.white.withOpacity(0.27),
               ),
-              bottom: -20,
-              right: -20,
             ),
             Positioned(
+              bottom: -10,
+              right: -10,
               child: Image.network(
                 pokemon.img,
                 errorBuilder: (BuildContext context, Object exception,
@@ -60,8 +62,6 @@ class ItemPokemonWidget extends StatelessWidget {
                   );
                 },
               ),
-              bottom: -10,
-              right: -10,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(
@@ -73,7 +73,7 @@ class ItemPokemonWidget extends StatelessWidget {
                 children: [
                   Text(
                     pokemon.name,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold,
@@ -83,7 +83,7 @@ class ItemPokemonWidget extends StatelessWidget {
                       .map((e) => ItemTypeWidget(
                             text: e,
                           ))
-                      .toList(),
+                      ,
                   // Column(
                   //   children: type.map((e) => ItemTypeWidget()).toList(),
                   // ),

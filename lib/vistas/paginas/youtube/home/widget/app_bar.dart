@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class YouTubeAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const YouTubeAppBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -13,11 +15,11 @@ class YouTubeAppBar extends StatelessWidget implements PreferredSizeWidget {
                 'assets/images/Youtube_logo.png', 
                 height: 40,
               ),
-              SizedBox(width: 8),
-              Text('YouTube'),
+              const SizedBox(width: 8),
+              const Text('YouTube'),
             ],
           ),
-          Row(
+          const Row(
             children: [
               Icon(Icons.cast),
               SizedBox(width: 12),
@@ -36,5 +38,5 @@ class YouTubeAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

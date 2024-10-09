@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget{
       //home:const Xilofono(),
       //home:const Dados(),
       //home: const Preguntas(),
+      
       home:const Inicio(),
       
     );

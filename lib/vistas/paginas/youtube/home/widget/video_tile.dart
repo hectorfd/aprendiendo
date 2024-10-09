@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 class VideoTile extends StatelessWidget {
+  const VideoTile({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -17,13 +19,13 @@ class VideoTile extends StatelessWidget {
               right: 8,
               child: Container(
                 color: Colors.black54,
-                padding: EdgeInsets.all(4),
-                child: Text('23:22', style: TextStyle(color: Colors.white)),
+                padding: const EdgeInsets.all(4),
+                child: const Text('23:22', style: TextStyle(color: Colors.white)),
               ),
             ),
           ],
         ),
-        ListTile(
+        const ListTile(
           leading: CircleAvatar(
             backgroundImage: NetworkImage('https://via.placeholder.com/50'),
           ),

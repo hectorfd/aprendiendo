@@ -13,7 +13,8 @@ import 'package:aprendiendo/vistas/paginas/practica/practica.dart';
 import 'package:aprendiendo/vistas/paginas/preguntas/preguntas.dart';
 import 'package:aprendiendo/vistas/paginas/tareas/tareas_dart.dart';
 import 'package:aprendiendo/vistas/paginas/xilofono/xilofono.dart';
-import 'package:aprendiendo/vistas/paginas/youtube/home/home3.dart';
+import 'package:aprendiendo/vistas/paginas/youtubeprof/pages/home_page.dart';
+import 'package:aprendiendo/vistas/paginas/youtubeprof/pages/init_page.dart';
 import 'package:flutter/material.dart';
 
 class VistaHome extends StatelessWidget {
@@ -35,7 +36,7 @@ class VistaHome extends StatelessWidget {
     'App_9',
     'App_10',
     'Pokedex',
-    'Youtube'
+    'YoutubeProf'
   ];
 
   // Lista de colores
@@ -90,9 +91,9 @@ class VistaHome extends StatelessWidget {
     const Imc(),
     App8(),
     const Shared(),
-    const HomePage(),
-    HomePage2(),
-    Home3(),
+    const HomePage4(),
+    const HomePage2(),
+    const InitPage(),
   ];
 
   @override

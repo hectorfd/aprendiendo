@@ -2,12 +2,11 @@
 import 'package:aprendiendo/vistas/paginas/youtubeprof/ui/general/colors.dart';
 
 import 'package:flutter/material.dart';
-
 class ItemFilterWidget extends StatelessWidget {
   String texto;
   bool isSelected;
 
-  ItemFilterWidget({
+  ItemFilterWidget({super.key, 
     required this.texto,
     required this.isSelected,
   });
@@ -17,10 +16,10 @@ class ItemFilterWidget extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(right: 10.0),
       child: Chip(
-        backgroundColor: isSelected ? Colors.white : KBrandSecondaryColor,
+        backgroundColor: isSelected ? Colors.white : kBrandSecundaryColor,
         label: Text(texto),
         labelStyle: TextStyle(
-          color: isSelected ? KBrandSecondaryColor : Colors.white,
+          color: isSelected ? kBrandSecundaryColor : Colors.white,
         ),
       ),
     );

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class YouTubeBottomNav extends StatelessWidget {
+  const YouTubeBottomNav({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      items: [
+      items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: 'Principal',

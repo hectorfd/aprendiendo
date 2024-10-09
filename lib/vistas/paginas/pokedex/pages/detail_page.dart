@@ -7,7 +7,7 @@ class DetailPage extends StatelessWidget {
   //const DetailPage({super.key});
   PokemonModel pokemon;
 
-  DetailPage({
+  DetailPage({super.key, 
     required this.pokemon,
   });
 
@@ -24,7 +24,7 @@ class DetailPage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.favorite_border,
               color: Colors.white,
             ),
@@ -52,7 +52,7 @@ class DetailPage extends StatelessWidget {
                   children: [
                     Text(
                       pokemon.name,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 36.0,
                         fontWeight: FontWeight.bold,
@@ -70,7 +70,7 @@ class DetailPage extends StatelessWidget {
                 ),
                 Text(
                   "#${pokemon.num}",
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,

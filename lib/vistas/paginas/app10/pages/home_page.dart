@@ -3,14 +3,14 @@ import 'package:aprendiendo/vistas/paginas/app10/models/task_model.dart';
 import 'package:aprendiendo/vistas/paginas/app10/widget/my_form_widget.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePage4 extends StatefulWidget {
+  const HomePage4({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePage4> createState() => _HomePage4State();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePage4State extends State<HomePage4> {
   //bool isFinished = false;
 
   showDialoForm(){

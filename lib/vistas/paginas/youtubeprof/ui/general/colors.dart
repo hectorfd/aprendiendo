@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
-const Color KBrandPrimaryColor = Color(0xFF212121);
-
-const Color KBrandSecondaryColor = Color(0xFF213232);
+const Color kBrandPrimaryColor = Color(0xFF212121);
+const Color kBrandSecundaryColor = Color(0xFF383838);
+const Color kBrandTertiryColor = Colors.white;

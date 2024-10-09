@@ -6,7 +6,7 @@ class ItemDataWidget extends StatelessWidget {
   String title;
   String data;
 
-  ItemDataWidget({
+  ItemDataWidget({super.key, 
     required this.title,
     required this.data,
   });
@@ -14,18 +14,18 @@ class ItemDataWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 6.0),
+      margin: const EdgeInsets.symmetric(vertical: 6.0),
       child: Row(
         children: [
           Text(
             "$title: \t\t\t",
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.black45,
             ),
           ),
           Text(
             data,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
             ),
           ),

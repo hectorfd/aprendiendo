@@ -25,9 +25,9 @@ class _HomePage2State extends State<HomePage2> {
   }
 
   getDataPokemon() async {
-    Uri _uri = Uri.parse(
+    Uri uri = Uri.parse(
         "https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json");
-    http.Response response = await http.get(_uri);
+    http.Response response = await http.get(uri);
     if (response.statusCode == 200) {
       Map<String, dynamic> myMap = json.decode(response.body);
       //pokemons = myMap["pokemon"];
@@ -55,18 +55,18 @@ class _HomePage2State extends State<HomePage2> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Pokedex",
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 14.0,
                 ),
                 GridView.count(
-                  physics: ScrollPhysics(),
+                  physics: const ScrollPhysics(),
                   shrinkWrap: true,
                   crossAxisCount: 2,
                   mainAxisSpacing: 12,

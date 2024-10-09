@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 class ItemTypeWidget extends StatelessWidget {
    String text;
 
-  ItemTypeWidget({
+  ItemTypeWidget({super.key, 
     required this.text,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         bottom: 4.0,
         right: 12.0,
         top: 4.0,
       ),
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: 14.0,
         vertical: 4.0,
       ),
@@ -25,7 +25,7 @@ class ItemTypeWidget extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: TextStyle(
+        style: const TextStyle(
           color: Colors.white,
         ),
       ),
