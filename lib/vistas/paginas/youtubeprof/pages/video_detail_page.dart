@@ -95,7 +95,6 @@ class VideoDetailPage extends StatelessWidget {
                   return const Center(child: Text("No hay comentarios", style: TextStyle(color: Colors.white)));
                 }
 
-                // Muestra los comentarios
                 final comments = snapshot.data!;
                 return ListView.builder(
                   shrinkWrap: true,
@@ -107,9 +106,8 @@ class VideoDetailPage extends StatelessWidget {
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // Avatar del comentarista
                           CircleAvatar(
-                            child: Text('A'), // Inicial del comentarista
+                            child: Text('A'), 
                             backgroundColor: Colors.grey[800],
                             foregroundColor: Colors.white,
                           ),
@@ -131,13 +129,13 @@ class VideoDetailPage extends StatelessWidget {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                                    Icon(Icons.thumb_up, color: Colors.white54),
+                                    Icon(Icons.thumb_up, color: Colors.white70),
                                     const SizedBox(width: 5),
-                                    Text('10', style: const TextStyle(color: Colors.white54)),
+                                    Text('10', style: const TextStyle(color: Colors.white70)),
                                     const SizedBox(width: 15),
-                                    Icon(Icons.thumb_down, color: Colors.white54),
-                                    const SizedBox(width: 15),
-                                    Icon(Icons.reply, color: Colors.white54),
+                                    Icon(Icons.thumb_down, color: Colors.white70),
+                                    const SizedBox(width: 30),
+                                    Icon(Icons.comment, color: Colors.white70),
                                   ],
                                 ),
                                 const SizedBox(height: 5),
